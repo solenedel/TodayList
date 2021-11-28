@@ -5,7 +5,7 @@ import { colorVars } from './css-variables';
 
 export const StyledNav = styled(Nav)`
   background-color: ${colorVars.primaryDark};
-  height: 90px;
+  height: 130px;
 
   & #nav-flexbox {
     display: flex;
@@ -26,7 +26,7 @@ export const StyledNav = styled(Nav)`
     & li,
     a {
       margin-right: 30px;
-      font-size: 28px;
+      font-size: 50px;
       transition: color 0.4s;
       text-decoration: none;
       color: ${colorVars.primaryLight};

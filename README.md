@@ -2,6 +2,8 @@
 
 To-do list app using PERN (Postgres, Express, React, Node) stack.
 
+To run in development mode: `npm run dev`
+
 ## Setting up the database
 
 After creating a Postgres database, in PSQL run: 

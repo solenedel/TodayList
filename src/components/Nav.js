@@ -50,7 +50,15 @@ const Nav = ({ className }) => {
     <nav className={className}>
       <div id="nav-flexbox">
         <Link to="/" id="logo-link">
-          <div id="logo">Template website</div>
+          <div id="logo">
+            <a href="https://fontmeme.com/pixel-fonts/">
+              <img
+                src="https://fontmeme.com/permalink/211128/5e96bc705cf9a1fae5fd1e2f7703ebef.png"
+                alt="pixel-fonts"
+                border="0"
+              />
+            </a>
+          </div>
         </Link>
         <ul>
           <Link to="/posts">

@@ -1,16 +1,15 @@
 // colors
 const colorVars = {
-  primaryDark: '#4C1FDE',
-  primaryLight: '#EFEEF5',
-  linkHover: '#F9C6FE',
-  darkPink: '#F9C6FE',
-  mediumPink: '#F9C6FE',
+  primaryDark: '#4a55a5',
+  primaryLight: '#C6D3FF',
+  linkHover: '#FFF2C6',
 };
 
 // fonts
 const fontVars = {
-  titleFont: `'IBM Plex Serif', serif`,
-  mainFont: `'Urbanist', sans-serif`,
+  titleFont: `'VT323', monospace`,
+  headingFont: `'VT323', monospace`,
+  mainFont: `'Overpass Mono', monospace`,
 };
 
 // Mixins
