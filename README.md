@@ -1,11 +1,6 @@
-# 🔧 ERN template
+# 📝 TodayList
 
-Template for websites built with:
- - Express & Node back end
- - React front end 
- 
- The main branch uses Postgres as the database engine. Another branch will be created for MongoDB database.
-
+To-do list app using PERN (Postgres, Express, React, Node) stack.
 
 ## Setting up the database
 
@@ -18,8 +13,9 @@ To reset the database subsequently, run in the node terminal: `npm run reset-db`
 
 ## Features
 
-- home page
-- login & logout
-- posts page (visible to all users, but only logged in users can post)
-
+- add items to the "today" list
+- add items to the "backlog" list
+- move items between the two lists by dragging and dropping
+- create custom list, delete list
+- customise background and list color
 
