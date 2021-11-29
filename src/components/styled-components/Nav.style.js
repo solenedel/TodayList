@@ -4,20 +4,22 @@ import Nav from '../Nav';
 import { colorVars } from './css-variables';
 
 export const StyledNav = styled(Nav)`
-  height: 140px;
-  border: solid red 3px;
+  height: 110px;
+  /* border: solid red 3px; */
 
   & #nav-flexbox {
     z-index: 2;
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    font-family: Arial, Helvetica, sans-serif;
   }
 
-  #logo-link {
-    color: ${colorVars.primaryLight};
-    text-decoration: none;
+  div#logo {
+    margin-top: 15px;
+    margin-left: 25px;
+    font-size: 60px;
+    font-family: 'Righteous', cursive;
+    color: ${colorVars.primaryGreen};
   }
 
   & ul {
@@ -30,10 +32,10 @@ export const StyledNav = styled(Nav)`
       font-size: 30px;
       transition: color 0.4s;
       text-decoration: none;
-      color: ${colorVars.primaryLight};
+      color: ${colorVars.primaryPink};
 
       &:visited {
-        color: ${colorVars.primaryLight};
+        color: ${colorVars.primaryPink};
       }
 
       &:hover {

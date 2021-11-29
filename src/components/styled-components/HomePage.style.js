@@ -5,7 +5,8 @@ import { colorVars, fontVars, mainButtonStyles, inputFieldStyles } from './css-v
 
 export const StyledHomePage = styled(HomePage)`
   border: solid blue 3px;
-  height: 100vh;
+  /* height: 100vh; */
+  height: 500px;
   /* width: fit-content; */
   width: 100vw;
   display: flex;

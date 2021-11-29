@@ -31,7 +31,7 @@ const Footer = ({ className }) => {
           This app was made by <a href="https://www.linkedin.com/in/solene-delumeau/">Solène</a>
         </p>
         <p>
-          Wave pattern generated with <a href="https://svgwave.in/">Svgwave</a>
+          Wave pattern made with <a href="https://svgwave.in/">Svgwave</a>
         </p>
       </div>
     </footer>

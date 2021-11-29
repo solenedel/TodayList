@@ -26,14 +26,6 @@ a,
     height: 100%; 
     min-height: 100%;
 
-    div#logo {
-      margin-top: 15px;
-      margin-left: 25px;
-      font-size: 60px;
-      color: white;
-      font-family: ${fontVars.mainFont};
-    }
-
     li, p, div {
       font-family: ${fontVars.mainFont};
       color: white;
