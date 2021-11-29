@@ -12,7 +12,7 @@ export const StyledHomePage = styled(HomePage)`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: baseline;
   justify-content: center;
   font-size: 20px;
 
@@ -22,20 +22,41 @@ export const StyledHomePage = styled(HomePage)`
 
   & h2 {
     font-family: ${fontVars.mainFont};
-    margin-bottom: 12px;
+    margin-bottom: 20px;
     font-weight: 400;
   }
 
-  ul {
+  .today h2 {
+    color: ${colorVars.primaryPink};
+  }
+
+  .today ul {
+    border: solid ${colorVars.primaryPink} 3px;
+    background: ${colorVars.primaryPink};
+    margin-bottom: 50px;
+  }
+
+  .tomorrow h2 {
+    color: ${colorVars.primaryGreen};
+  }
+
+  .tomorrow ul {
     border: solid ${colorVars.primaryGreen} 3px;
     background: ${colorVars.primaryGreen};
+  }
+
+  ul {
     border-radius: 6px;
-    padding: 10px;
+    padding: 20px;
 
     & li {
       margin-bottom: 25px;
       min-width: 200px;
       color: black;
+
+      & span {
+        margin-right: 15px;
+      }
     }
   }
 `;

@@ -6,17 +6,42 @@ export const HomePage = ({ className }) => {
     <main className={className} id="home-page-container">
       <div className="today list">
         <h2>Today</h2>
-        <ul>
-          <li>clean my room</li>
-          <li>wash the dishes</li>
-          <li>reply to emails</li>
+        <ul className="today">
+          <li>
+            <span>
+              <i className="fas fa-broom" />
+            </span>
+            clean my room
+          </li>
+          <li>
+            <span>
+              <i className="fas fa-hand-sparkles" />
+            </span>
+            wash the dishes
+          </li>
+          <li>
+            <span>
+              <i className="far fa-envelope" />
+            </span>
+            reply to emails
+          </li>
         </ul>
       </div>
       <div className="tomorrow list">
         <h2>Tomorrow</h2>
         <ul>
-          <li>exercise</li>
-          <li>buy groceries</li>
+          <li>
+            <span>
+              <i className="fas fa-running" />
+            </span>
+            exercise
+          </li>
+          <li>
+            <span>
+              <i className="fas fa-shopping-basket" />
+            </span>
+            buy groceries
+          </li>
         </ul>
       </div>
     </main>
