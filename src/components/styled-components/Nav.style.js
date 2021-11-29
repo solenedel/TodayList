@@ -4,13 +4,15 @@ import Nav from '../Nav';
 import { colorVars } from './css-variables';
 
 export const StyledNav = styled(Nav)`
-  background-color: ${colorVars.primaryDark};
-  height: 130px;
+  height: 140px;
+  border: solid red 3px;
 
   & #nav-flexbox {
+    z-index: 2;
     display: flex;
     justify-content: space-between;
-    padding-top: 15px;
+    align-items: baseline;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   #logo-link {
@@ -21,12 +23,11 @@ export const StyledNav = styled(Nav)`
   & ul {
     display: flex;
     justify-content: flex-end;
-    margin-top: 15px;
 
     & li,
     a {
       margin-right: 30px;
-      font-size: 50px;
+      font-size: 30px;
       transition: color 0.4s;
       text-decoration: none;
       color: ${colorVars.primaryLight};

@@ -3,19 +3,18 @@ import styled from 'styled-components';
 import { HomePage } from '../HomePage';
 import { colorVars, fontVars, mainButtonStyles, inputFieldStyles } from './css-variables';
 
-// styles for HomePage component
-// includes the google map, search form, etc
-
 export const StyledHomePage = styled(HomePage)`
-  margin-top: 35px;
+  border: solid blue 3px;
   height: 100vh;
-  width: fit-content;
+  /* width: fit-content; */
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
 
   & img {
     width: 100px;
+    display: none;
   }
 
   & h3 {

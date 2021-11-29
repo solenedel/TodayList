@@ -4,22 +4,35 @@ import React from 'react';
 const Footer = ({ className }) => {
   return (
     <footer className={className}>
-      <h4>Contact us</h4>
-      <div id="footer-content">
-        <ul>
-          <li>sample@mail.com</li>
-          <div className="credits">
-            {/* eslint-disable-next-line */}
-          Icons by <a href="https://www.freepik.com" title="Freepik">Freepik </a>
-            {/* eslint-disable-next-line */}
-          from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com </a> 
-          </div>
-        </ul>
-        <div className="social-icons">
-          <i className="fab fa-instagram" />
-          <i className="fab fa-twitter" />
-          <i className="fab fa-facebook" />
-        </div>
+      <svg
+        width="100%"
+        height="100%"
+        id="svg"
+        viewBox="0 0 1440 400"
+        xmlns="http://www.w3.org/2000/svg"
+        className="transition duration-300 ease-in-out delay-150"
+      >
+        <defs>
+          <linearGradient id="gradient" x1="43%" y1="0%" x2="57%" y2="100%">
+            <stop offset="5%" stopColor="#f78da7ff" />
+            <stop offset="95%" stopColor="#32ded4ff" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M 0,400 C 0,400 0,200 0,200 C 40.93191434478719,173.52533681009442 81.86382868957438,147.05067362018886 112,160 C 142.13617131042562,172.94932637981114 161.47659958648964,225.3226423293391 196,237 C 230.52340041351036,248.6773576706609 280.2297729644671,219.65875706245484 323,216 C 365.7702270355329,212.34124293754516 401.6043085556421,234.04232942084155 428,254 C 454.3956914443579,273.95767057915845 471.35299281296466,292.17192525417886 499,266 C 526.6470071870353,239.8280747458211 564.9837201924992,169.26996956244292 600,136 C 635.0162798075008,102.73003043755708 666.7121264170389,106.74819649604947 703,141 C 739.2878735829611,175.25180350395053 780.1677741393455,239.7372444533592 814,235 C 847.8322258606545,230.2627555466408 874.6167770255789,156.30282569051366 912,155 C 949.3832229744211,153.69717430948634 997.3651177583392,225.05145278458613 1033,229 C 1068.6348822416608,232.94854721541387 1091.9227519410638,169.49136317114184 1120,145 C 1148.0772480589362,120.50863682885816 1180.9438744774059,134.98309453084642 1216,149 C 1251.0561255225941,163.01690546915358 1288.3017501493125,176.57625870547247 1326,185 C 1363.6982498506875,193.42374129452753 1401.8491249253439,196.71187064726377 1440,200 C 1440,200 1440,400 1440,400 Z"
+          stroke="none"
+          strokeWidth="0"
+          fill="url(#gradient)"
+          className="transition-all duration-300 ease-in-out delay-150 path-0"
+        />
+      </svg>
+      <div className="credits">
+        <p>
+          This app was made by <a href="https://www.linkedin.com/in/solene-delumeau/">Solène</a>
+        </p>
+        <p>
+          Wave pattern generated with <a href="https://svgwave.in/">Svgwave</a>
+        </p>
       </div>
     </footer>
   );
