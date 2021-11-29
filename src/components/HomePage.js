@@ -26,6 +26,9 @@ export const HomePage = ({ className }) => {
             reply to emails
           </li>
         </ul>
+        <button type="button" className="today">
+          + new item
+        </button>
       </div>
       <div className="tomorrow list">
         <h2>Tomorrow</h2>
@@ -43,6 +46,9 @@ export const HomePage = ({ className }) => {
             buy groceries
           </li>
         </ul>
+        <button type="button" className="tomorrow">
+          + new item
+        </button>
       </div>
     </main>
   );

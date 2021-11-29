@@ -15,8 +15,9 @@ To reset the database subsequently, run in the node terminal: `npm run reset-db`
 
 ## Features
 
-- add items to the "today" list
-- add items to the "backlog" list
+
+- add items to the "today" and tomorrow" list
+- select an icon for each list item (form fontawesome)
 - move items between the two lists by dragging and dropping
 - create custom list, delete list
 - customise background and list color

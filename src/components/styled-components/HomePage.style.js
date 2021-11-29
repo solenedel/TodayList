@@ -33,7 +33,6 @@ export const StyledHomePage = styled(HomePage)`
   .today ul {
     border: solid ${colorVars.primaryPink} 3px;
     background: ${colorVars.primaryPink};
-    margin-bottom: 50px;
   }
 
   .tomorrow h2 {
@@ -48,6 +47,7 @@ export const StyledHomePage = styled(HomePage)`
   ul {
     border-radius: 6px;
     padding: 20px;
+    margin-bottom: 50px;
 
     & li {
       margin-bottom: 25px;
@@ -57,6 +57,26 @@ export const StyledHomePage = styled(HomePage)`
       & span {
         margin-right: 15px;
       }
+    }
+  }
+
+  button {
+    width: 135px;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+
+    &.today {
+      background: ${colorVars.primaryPink};
+    }
+
+    &.tomorrow {
+      background: ${colorVars.primaryGreen};
+    }
+
+    :hover {
+      background-color: ${colorVars.linkHover};
+      cursor: pointer;
     }
   }
 `;
