@@ -1,19 +1,8 @@
 import React from 'react';
-
-// The home page is the lists page
+import Form from './Form';
 
 // eslint-disable-next-line
-export const HomePage = ({ className }) => {
-  // form to add a new item
-  const NewTaskForm = () => (
-    <form action="/lists">
-      <input type="text" placeholder="add new task" />
-      <button type="button" className="tomorrow">
-        <i className="fas fa-plus-circle" />
-      </button>
-    </form>
-  );
-
+export const HomePage = ({ className, props }) => {
   return (
     <main className={className} id="home-page-container">
       <div className="today list">
@@ -38,7 +27,7 @@ export const HomePage = ({ className }) => {
             reply to emails
           </li>
         </ul>
-        <NewTaskForm className="today" />
+        <Form id="today" className="today" />
       </div>
       <div className="tomorrow list">
         <h2>Tomorrow</h2>
@@ -56,7 +45,7 @@ export const HomePage = ({ className }) => {
             buy groceries
           </li>
         </ul>
-        <NewTaskForm className="tomorrow" />
+        <Form id="tomorrow" className="tomorrow" />
       </div>
     </main>
   );

@@ -18,7 +18,7 @@ export const StyledHomePage = styled(HomePage)`
 
   form {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     & input {
@@ -28,6 +28,7 @@ export const StyledHomePage = styled(HomePage)`
       font-size: 22px;
       border: none;
       border-radius: 5px;
+      margin-right: 10px;
       background-color: ${colorVars.primaryYellow};
 
       ::placeholder {
