@@ -16,6 +16,46 @@ export const StyledHomePage = styled(HomePage)`
   justify-content: center;
   font-size: 20px;
 
+  form {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    & input {
+      padding-left: 8px;
+      width: 80%;
+      height: 40px;
+      font-size: 22px;
+      border: none;
+      border-radius: 5px;
+      background-color: ${colorVars.primaryYellow};
+
+      ::placeholder {
+        font-size: 22px;
+        color: black;
+        opacity: 0.7;
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+
+      & i {
+        color: ${colorVars.primaryYellow};
+        font-size: 40px;
+
+        :hover {
+          color: ${colorVars.primaryBlue};
+        }
+
+        :active {
+          transform: translateY(4px);
+        }
+      }
+    }
+  }
+
   .list {
     margin: 20px 50px 0 50px;
   }
@@ -57,26 +97,6 @@ export const StyledHomePage = styled(HomePage)`
       & span {
         margin-right: 15px;
       }
-    }
-  }
-
-  button {
-    width: 135px;
-    font-size: 22px;
-    border: none;
-    border-radius: 5px;
-
-    &.today {
-      background: ${colorVars.primaryPink};
-    }
-
-    &.tomorrow {
-      background: ${colorVars.primaryGreen};
-    }
-
-    :hover {
-      background-color: ${colorVars.linkHover};
-      cursor: pointer;
     }
   }
 `;
