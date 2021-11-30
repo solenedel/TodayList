@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-const Form = () => {
+// eslint-disable-next-line
+const Form = (props) => {
   const [newTask, setNewTask] = useState('');
 
   const handleChange = (e) => {
@@ -9,10 +10,12 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // props.onSubmit({
-    //   id: Math.floor(Math.random() * 10000),
-    //   text: newTask,
-    // });
+    // eslint-disable-next-line
+    props.onSubmit({
+      id: Math.floor(Math.random() * 10000),
+      text: newTask,
+    });
+
     setNewTask('');
   };
 
