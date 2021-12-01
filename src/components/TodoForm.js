@@ -19,7 +19,7 @@ const TodoForm = ({ addTodo }) => {
     e.preventDefault();
 
     if (todo.task.trim()) {
-      addTodo({ ...todo, id: uuid.v4() });
+      addTodo({ ...todo, id: uuid });
 
       // reset task input
       setTodo({ ...todo, task: '' });
