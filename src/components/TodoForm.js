@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import uuid from 'uuid';
 
 // eslint-disable-next-line
 const TodoForm = ({ addTodo }) => {
@@ -13,6 +14,14 @@ const TodoForm = ({ addTodo }) => {
     setTodo({ ...todo, task: e.target.value });
   };
 
+  // handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (todo.task.trim()) {
+      addTodo({ ...todo, id: uuid.v4() });
+    }
+  };
   return (
     <form>
       <input
