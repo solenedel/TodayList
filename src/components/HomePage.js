@@ -7,17 +7,19 @@ export const HomePage = ({ className }) => {
   // eslint-disable-next-line
   const [todos, setTodos] = useState([]);
 
+  const addTodo = () => {
+    setTodos([todo, ...todos]);
+  };
+
   return (
     <main className={className} id="home-page-container">
       <div className="today list">
         <h2>Today</h2>
-
-        <TodoForm id="today" className="today" />
+        <TodoForm id="today" className="today" addTodo={addTodo} />
       </div>
       <div className="tomorrow list">
         <h2>Tomorrow</h2>
-
-        <TodoForm id="tomorrow" className="tomorrow" />
+        <TodoForm id="tomorrow" className="tomorrow" addTodo={addTodo} />
       </div>
     </main>
   );
