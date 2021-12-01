@@ -8,7 +8,7 @@ export const HomePage = ({ className }) => {
   // eslint-disable-next-line
   const [todos, setTodos] = useState([]);
 
-  const addTodo = () => {
+  const addTodo = (todo) => {
     setTodos([todo, ...todos]);
   };
 
