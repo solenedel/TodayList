@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import TodoForm from './TodoForm';
-import TodoList from './TodoList';
+import ListContainer from './ListContainer';
 
 // unique local storage key to store the todos
 const LOCAL_STORAGE_KEY = 'todaylist-todos';
@@ -53,16 +52,12 @@ export const HomePage = ({ className }) => {
 
   return (
     <main className={className} id="home-page-container">
-      <div className="today list">
-        <h2>Today</h2>
-        <TodoForm id="today" className="today" addTodo={addTodo} />
-        <TodoList todos={todos} toggleComplete={toggleComplete} removeTodo={removeTodo} />
-      </div>
-      <div className="tomorrow list">
-        <h2>Tomorrow</h2>
-        <TodoForm id="tomorrow" className="tomorrow" addTodo={addTodo} />
-        <TodoList todos={todos} toggleComplete={toggleComplete} removeTodo={removeTodo} />
-      </div>
+      <ListContainer
+        todos={todos}
+        addTodo={addTodo}
+        removeTodo={removeTodo}
+        toggleComplete={toggleComplete}
+      />
     </main>
   );
 };
