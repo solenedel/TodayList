@@ -9,6 +9,13 @@ export const HomePage = ({ className }) => {
   // eslint-disable-next-line
   const [todos, setTodos] = useState([]);
 
+  // clicking on the new list button
+  const [list, setList] = useState({
+    id: '',
+    todos: [],
+  });
+  const [lists, setLists] = useState([{}]);
+
   // render todos saved in local storage (on refresh)
   useEffect(() => {
     const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
@@ -50,14 +57,20 @@ export const HomePage = ({ className }) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  // create a new list
+  const addNewList = () => {};
+
   return (
-    <main className={className} id="home-page-container">
+    <main className={className}>
       <ListContainer
         todos={todos}
         addTodo={addTodo}
         removeTodo={removeTodo}
         toggleComplete={toggleComplete}
       />
+      <button type="button" onClick={addNewList}>
+        New list
+      </button>
     </main>
   );
 };
