@@ -14,16 +14,20 @@ const TodoForm = ({ addTodo }) => {
     setTodo({ ...todo, task: e.target.value });
   };
 
-  // handle form submission
+  // handle form submission: add new todo and reset form to blank state
   const handleSubmit = (e) => {
     e.preventDefault();
 
     if (todo.task.trim()) {
       addTodo({ ...todo, id: uuid.v4() });
+
+      // reset task input
+      setTodo({ ...todo, task: '' });
     }
   };
+
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <input
         type="text"
         name="task"

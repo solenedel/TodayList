@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import TodoForm from './TodoForm';
+import TodoList from './TodoList';
 // import Todo from './Todo';
 
 // eslint-disable-next-line
@@ -16,10 +17,12 @@ export const HomePage = ({ className }) => {
       <div className="today list">
         <h2>Today</h2>
         <TodoForm id="today" className="today" addTodo={addTodo} />
+        <TodoList todos={todos} />
       </div>
       <div className="tomorrow list">
         <h2>Tomorrow</h2>
         <TodoForm id="tomorrow" className="tomorrow" addTodo={addTodo} />
+        <TodoList todos={todos} />
       </div>
     </main>
   );

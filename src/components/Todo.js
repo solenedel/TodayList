@@ -1,31 +1,14 @@
-/* import React from 'react';
-// import Form from './Form';
+/* eslint react/prop-types: 0 */
+import React from 'react';
 
-const Todo = ({ todos }) => {
-  // const [edit, setEdit] = useState({
-  //   id: null,
-  //   value: '',
-  // });
-
-  const completeTodo = (id) => {
-    const updatedTodos = todos.map((todo) => {
-      if (todo.id === id) {
-        // eslint-disable-next-line
-        todo.isComplete = !todo.isComplete;
-      }
-      return todo;
-    });
-    setTodos(updatedTodos);
-  };
-  return todos.map((todo, index) => (
-    <div className={todo.isComplete ? 'todo-row-complete' : 'todo-row'} key={index}>
-      <div key={todo.id} onClick={() => completeTodo(todo.id)}>
-        {todo.text}
-      </div>
+const Todo = ({ todo }) => {
+  return (
+    <div>
+      <input type="checkbox" />
+      <li>{todo.task}</li>
+      <button type="button">X</button>
     </div>
-  ));
+  );
 };
 
 export default Todo;
-
-*/
