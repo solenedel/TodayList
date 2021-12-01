@@ -24,8 +24,25 @@ export const HomePage = ({ className }) => {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(todos));
   }, [todos]);
 
+  // add a task to the todo list
   const addTodo = (todo) => {
     setTodos([todo, ...todos]);
+  };
+
+  // toggle to complete a task
+  const toggleComplete = (id) => {
+    setTodos(
+      todos.map((todo) => {
+        // find the selected todo in the todos array
+        if (todo.id === id) {
+          return {
+            ...todo,
+            completed: !todo.completed, // toggle completion status
+          };
+        }
+        return todo;
+      })
+    );
   };
 
   return (
@@ -33,12 +50,12 @@ export const HomePage = ({ className }) => {
       <div className="today list">
         <h2>Today</h2>
         <TodoForm id="today" className="today" addTodo={addTodo} />
-        <TodoList todos={todos} />
+        <TodoList todos={todos} toggleComplete={toggleComplete} />
       </div>
       <div className="tomorrow list">
         <h2>Tomorrow</h2>
         <TodoForm id="tomorrow" className="tomorrow" addTodo={addTodo} />
-        <TodoList todos={todos} />
+        <TodoList todos={todos} toggleComplete={toggleComplete} />
       </div>
     </main>
   );

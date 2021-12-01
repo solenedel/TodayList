@@ -1,7 +1,7 @@
 /* eslint react/prop-types: 0 */
 import React from 'react';
 
-const Todo = ({ todo }) => {
+const Todo = ({ todo, toggleComplete }) => {
   return (
     <div style={{ display: 'flex' }}>
       <input type="checkbox" />
