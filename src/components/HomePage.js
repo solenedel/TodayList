@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { v4 as uuid } from 'uuid';
 import ListContainer from './ListContainer';
 
 // unique local storage key to store the todos
@@ -9,12 +10,11 @@ export const HomePage = ({ className }) => {
   // eslint-disable-next-line
   const [todos, setTodos] = useState([]);
 
-  // clicking on the new list button
   const [list, setList] = useState({
     id: '',
-    todos: [],
   });
-  const [lists, setLists] = useState([{}]);
+
+  const [lists, setLists] = useState([]);
 
   // render todos saved in local storage (on refresh)
   useEffect(() => {
@@ -57,17 +57,24 @@ export const HomePage = ({ className }) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  // create a new list
-  const addNewList = () => {};
+  // add a new list
+  const addNewList = (l) => {
+    setList({ ...list, id: uuid() });
+    setLists([l, ...lists]);
+  };
 
   return (
     <main className={className}>
-      <ListContainer
-        todos={todos}
-        addTodo={addTodo}
-        removeTodo={removeTodo}
-        toggleComplete={toggleComplete}
-      />
+      {lists.map((l) => (
+        <ListContainer
+          key={l.id}
+          list={l}
+          todos={todos}
+          addTodo={addTodo}
+          removeTodo={removeTodo}
+          toggleComplete={toggleComplete}
+        />
+      ))}
       <button type="button" onClick={addNewList}>
         New list
       </button>
