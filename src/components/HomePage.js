@@ -45,17 +45,22 @@ export const HomePage = ({ className }) => {
     );
   };
 
+  // delete a todo
+  const removeTodo = (id) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+
   return (
     <main className={className} id="home-page-container">
       <div className="today list">
         <h2>Today</h2>
         <TodoForm id="today" className="today" addTodo={addTodo} />
-        <TodoList todos={todos} toggleComplete={toggleComplete} />
+        <TodoList todos={todos} toggleComplete={toggleComplete} removeTodo={removeTodo} />
       </div>
       <div className="tomorrow list">
         <h2>Tomorrow</h2>
         <TodoForm id="tomorrow" className="tomorrow" addTodo={addTodo} />
-        <TodoList todos={todos} toggleComplete={toggleComplete} />
+        <TodoList todos={todos} toggleComplete={toggleComplete} removeTodo={removeTodo} />
       </div>
     </main>
   );
