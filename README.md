@@ -4,6 +4,7 @@ To-do list app using PERN (Postgres, Express, React, Node) stack.
 
 To run in development mode: `npm run dev`
 
+
 ## Setting up the database
 
 After creating a Postgres database, in PSQL run: 
@@ -17,7 +18,6 @@ To reset the database subsequently, run in the node terminal: `npm run reset-db`
 
 
 - add items to the "today" and tomorrow" list
-- delete items from the list OR mark as completed
 - select an icon for each list item (form fontawesome)
 - move items between the two lists by dragging and dropping
 - create custom list, delete list

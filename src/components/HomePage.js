@@ -35,6 +35,7 @@ export const HomePage = ({ className }) => {
       todos.map((todo) => {
         // find the selected todo in the todos array
         if (todo.id === id) {
+          console.log('removed: ', todo.id);
           return {
             ...todo,
             completed: !todo.completed, // toggle completion status

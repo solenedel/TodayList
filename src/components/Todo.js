@@ -9,12 +9,12 @@ const Todo = ({ todo, toggleComplete, removeTodo }) => {
 
   // handle click to delete todo
   const handleRemoveClick = () => {
-    removeTodo(todo.id); // bugging here
+    removeTodo(todo.id);
   };
 
   return (
     <div style={{ display: 'flex' }}>
-      <input type="checkbox" checked={todo.completed} onClick={handleCheckboxClick} />
+      <input type="checkbox" /* checked={todo.completed} */ onClick={handleCheckboxClick} />
       <li
         style={{
           color: 'white',
