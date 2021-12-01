@@ -62,13 +62,12 @@ export const HomePage = ({ className }) => {
   const addNewList = (l) => {
     setList({ ...list, id: uuid() });
     setLists([l, ...lists]);
-    console.log(' list id ', list.id);
+    console.log('ADD NEW LIST: list id ', l.id);
   };
 
   // delete a list
   const deleteList = (id) => {
-    console.log('INSIDE DELETE LIST FUNCTION');
-    console.log('id', id); // list id is not working correctly
+    console.log('DELETE LIST: id ', id);
     setLists(lists.filter((l) => l.id !== id));
   };
 
@@ -83,6 +82,7 @@ export const HomePage = ({ className }) => {
           removeTodo={removeTodo}
           toggleComplete={toggleComplete}
           deleteList={deleteList}
+          addNewList={addNewList}
         />
       ))}
       <button type="button" onClick={addNewList}>

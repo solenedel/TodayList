@@ -3,7 +3,19 @@ import React from 'react';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
 
-const ListContainer = ({ addTodo, todos, removeTodo, toggleComplete, deleteList }) => {
+const ListContainer = ({
+  list,
+  addNewList,
+  addTodo,
+  todos,
+  removeTodo,
+  toggleComplete,
+  deleteList,
+}) => {
+  const handleDeleteList = () => {
+    deleteList(list.id);
+  };
+
   return (
     <section>
       <div className="today list">
@@ -14,8 +26,9 @@ const ListContainer = ({ addTodo, todos, removeTodo, toggleComplete, deleteList 
           deleteList={deleteList}
           toggleComplete={toggleComplete}
           removeTodo={removeTodo}
+          addNewList={addNewList}
         />
-        <button type="button" onClick={deleteList}>
+        <button type="button" onClick={handleDeleteList}>
           Delete list
         </button>
       </div>
