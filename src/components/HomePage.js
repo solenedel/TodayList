@@ -54,6 +54,7 @@ export const HomePage = ({ className }) => {
 
   // delete a todo
   const removeTodo = (id) => {
+    // console.log(' list id ', list.id);
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
@@ -61,6 +62,14 @@ export const HomePage = ({ className }) => {
   const addNewList = (l) => {
     setList({ ...list, id: uuid() });
     setLists([l, ...lists]);
+    console.log(' list id ', list.id);
+  };
+
+  // delete a list
+  const deleteList = (id) => {
+    console.log('INSIDE DELETE LIST FUNCTION');
+    console.log('id', id); // list id is not working correctly
+    setLists(lists.filter((l) => l.id !== id));
   };
 
   return (
@@ -73,6 +82,7 @@ export const HomePage = ({ className }) => {
           addTodo={addTodo}
           removeTodo={removeTodo}
           toggleComplete={toggleComplete}
+          deleteList={deleteList}
         />
       ))}
       <button type="button" onClick={addNewList}>
