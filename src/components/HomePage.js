@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { v4 as uuid } from 'uuid';
+// import { v4 as uuid } from 'uuid';
 import ListContainer from './ListContainer';
 
 // unique local storage key to store the todos
@@ -10,6 +10,7 @@ export const HomePage = ({ className }) => {
   // eslint-disable-next-line
   const [todos, setTodos] = useState([]);
 
+  // eslint-disable-next-line
   const [list, setList] = useState({
     id: '',
   });
@@ -33,6 +34,8 @@ export const HomePage = ({ className }) => {
   // add a task to the todo list
   const addTodo = (todo) => {
     setTodos([todo, ...todos]);
+    console.log('ADD TODO: ID ', todo.id);
+    console.log('todo', todo);
   };
 
   // toggle to complete a task
@@ -54,29 +57,32 @@ export const HomePage = ({ className }) => {
 
   // delete a todo
   const removeTodo = (id) => {
-    // console.log(' list id ', list.id);
+    console.log('REMOVE TODO: ID ', id);
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   // add a new list
-  const addNewList = (l) => {
-    setList({ ...list, id: uuid() });
-    setLists([l, ...lists]);
-    console.log('ADD NEW LIST: list id ', l.id);
+  // eslint-disable-next-line
+  const addNewList = (list) => {
+    // setList({ ...list, id: uuid() });
+
+    setLists([list, ...lists]);
+    console.log('ADD NEW LIST: list ', list);
   };
 
   // delete a list
   const deleteList = (id) => {
-    console.log('DELETE LIST: id ', id);
-    setLists(lists.filter((l) => l.id !== id));
+    // eslint-disable-next-line
+    setLists(lists.filter((list) => list.id !== id));
   };
 
   return (
     <main className={className}>
-      {lists.map((l) => (
+      {/* eslint-disable-next-line */}
+      {lists.map((list) => (
         <ListContainer
-          key={l.id}
-          list={l}
+          key={list.id}
+          list={list}
           todos={todos}
           addTodo={addTodo}
           removeTodo={removeTodo}

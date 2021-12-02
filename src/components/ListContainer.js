@@ -12,12 +12,14 @@ const ListContainer = ({
   toggleComplete,
   deleteList,
 }) => {
+  // handle deleting a list when clicking on delete button
   const handleDeleteList = () => {
     deleteList(list.id);
+    console.log('LIST DELETED, id:', list.id);
   };
 
   return (
-    <section>
+    <section key={list.id}>
       <div className="today list">
         <h2>Today</h2>
         <TodoForm id="today" className="today" addTodo={addTodo} />
