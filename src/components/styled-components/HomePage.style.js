@@ -4,17 +4,18 @@ import { HomePage } from '../HomePage';
 import { colorVars, fontVars } from './css-variables';
 
 export const StyledHomePage = styled(HomePage)`
-  /* border: solid blue 3px; */
+  border: solid blue 3px;
   /* height: 100vh; */
   /* width: fit-content; */
   height: fit-content;
   width: 100vw;
   display: flex;
-  flex-direction: row;
+  /* flex-direction: column; */
   flex-wrap: wrap;
   align-items: baseline;
-  justify-content: center;
+  justify-content: flex-start;
   font-size: 20px;
+  margin-top: 50px;
 
   form {
     display: flex;
@@ -72,17 +73,8 @@ export const StyledHomePage = styled(HomePage)`
   }
 
   .today ul {
-    border: solid ${colorVars.primaryPink} 3px;
-    background: ${colorVars.primaryPink};
-  }
-
-  .tomorrow h2 {
-    color: ${colorVars.primaryGreen};
-  }
-
-  .tomorrow ul {
-    border: solid ${colorVars.primaryGreen} 3px;
-    background: ${colorVars.primaryGreen};
+    border: solid ${colorVars.primaryBlue} 3px;
+    background: ${colorVars.primaryBlue};
   }
 
   ul {
@@ -97,6 +89,45 @@ export const StyledHomePage = styled(HomePage)`
 
       & span {
         margin-right: 15px;
+      }
+    }
+  }
+
+  button.btn {
+    font-size: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    background: none;
+    margin-left: 20px;
+
+    &.delete {
+      border: solid 3px #fca4a3;
+      color: #fca4a3;
+
+      &:hover {
+        background: #fca4a3;
+        color: black;
+      }
+    }
+
+    &.new-list {
+      border: solid 3px ${colorVars.primaryGreen};
+      color: ${colorVars.primaryGreen};
+
+      &:hover {
+        background: ${colorVars.primaryGreen};
+        color: black;
+      }
+    }
+
+    &.rename {
+      border: solid 3px ${colorVars.primaryYellow};
+      color: ${colorVars.primaryYellow};
+
+      &:hover {
+        background: ${colorVars.primaryYellow};
+        color: black;
       }
     }
   }

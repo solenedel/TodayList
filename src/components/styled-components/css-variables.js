@@ -4,7 +4,7 @@ const colorVars = {
   primaryGreen: '#37dcd4',
   primaryPink: '#e795ab',
   primaryYellow: '#fffdc4',
-  primaryBlue: '#B0B3F9',
+  primaryBlue: '#A3BBFC',
   linkHover: '#FFF2C6',
 };
 

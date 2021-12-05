@@ -30,8 +30,11 @@ const ListContainer = ({
           removeTodo={removeTodo}
           addNewList={addNewList}
         />
-        <button type="button" onClick={() => handleDeleteList(list.id)}>
+        <button className="btn delete" type="button" onClick={() => handleDeleteList(list.id)}>
           Delete list
+        </button>
+        <button className="btn rename" type="button" onClick={() => handleDeleteList(list.id)}>
+          Rename list
         </button>
       </div>
     </section>
