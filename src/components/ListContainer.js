@@ -22,7 +22,7 @@ const ListContainer = ({
     <section key={list.id}>
       <div className="today list">
         <h2>Today</h2>
-        <TodoForm id="today" className="today" addTodo={addTodo} />
+        <TodoForm className="today" addTodo={addTodo} listId={list.id} />
         <TodoList
           todos={todos}
           deleteList={deleteList}

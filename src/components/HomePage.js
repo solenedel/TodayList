@@ -82,7 +82,7 @@ export const HomePage = ({ className }) => {
         <ListContainer
           key={list.id}
           list={list}
-          todos={todos}
+          todos={todos.filter((todo) => todo.listId === list.id)}
           addTodo={addTodo}
           removeTodo={removeTodo}
           toggleComplete={toggleComplete}
