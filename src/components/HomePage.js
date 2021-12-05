@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-// import { v4 as uuid } from 'uuid';
+import { v4 as uuid } from 'uuid';
 import ListContainer from './ListContainer';
 
 // unique local storage key to store the todos
@@ -9,11 +9,6 @@ const LOCAL_STORAGE_KEY = 'todaylist-todos';
 export const HomePage = ({ className }) => {
   // eslint-disable-next-line
   const [todos, setTodos] = useState([]);
-
-  // eslint-disable-next-line
-  const [list, setList] = useState({
-    id: '',
-  });
 
   const [lists, setLists] = useState([]);
 
@@ -62,18 +57,22 @@ export const HomePage = ({ className }) => {
   };
 
   // add a new list
-  // eslint-disable-next-line
-  const addNewList = (list) => {
-    // setList({ ...list, id: uuid() });
+  const addNewList = () => {
+    const newList = {
+      id: uuid(),
+    };
 
-    setLists([list, ...lists]);
-    console.log('ADD NEW LIST: list ', list);
+    /*
+     * when you pass an anon function in a useState function, the anon func argument will
+     * always be the most recent value of the state variable
+     */
+    setLists((prev) => [...prev, newList]);
   };
 
   // delete a list
   const deleteList = (id) => {
     // eslint-disable-next-line
-    setLists(lists.filter((list) => list.id !== id));
+    setLists((prev) => [...prev.filter((list) => list.id !== id)]); // spread new array so that you don't mutate original array
   };
 
   return (

@@ -13,8 +13,8 @@ const ListContainer = ({
   deleteList,
 }) => {
   // handle deleting a list when clicking on delete button
-  const handleDeleteList = () => {
-    deleteList(list.id);
+  const handleDeleteList = (id) => {
+    deleteList(id);
     console.log('LIST DELETED, id:', list.id);
   };
 
@@ -30,7 +30,7 @@ const ListContainer = ({
           removeTodo={removeTodo}
           addNewList={addNewList}
         />
-        <button type="button" onClick={handleDeleteList}>
+        <button type="button" onClick={() => handleDeleteList(list.id)}>
           Delete list
         </button>
       </div>
