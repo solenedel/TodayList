@@ -10,7 +10,6 @@ export const StyledHomePage = styled(HomePage)`
   height: fit-content;
   width: 100vw;
   display: flex;
-  /* flex-direction: column; */
   flex-wrap: wrap;
   align-items: baseline;
   justify-content: flex-start;

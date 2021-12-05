@@ -90,9 +90,9 @@ export const HomePage = ({ className }) => {
           addNewList={addNewList}
         />
       ))}
-      <button className="btn new-list" type="button" onClick={addNewList}>
+      {/* <button className="btn new-list" type="button" onClick={addNewList}>
         New list
-      </button>
+      </button> */}
     </main>
   );
 };

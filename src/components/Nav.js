@@ -54,6 +54,9 @@ const Nav = ({ className }) => {
         </Link>
         <ul>
           <Link to="/">
+            <li className="nav-link">New list</li>
+          </Link>
+          <Link to="/">
             <li className="nav-link">Lists</li>
           </Link>
           {user.auth ? LogoutButton() : LoginButton()}
