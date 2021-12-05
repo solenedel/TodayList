@@ -4,7 +4,7 @@ import { Link, useHistory } from 'react-router-dom';
 import { useAppContext } from '../context';
 
 // eslint-disable-next-line
-const Nav = ({ className }) => {
+const Nav = ({ className, addNewList, lists }) => {
   const { userContext } = useAppContext();
   const [user, setUser] = userContext;
   const history = useHistory();
@@ -54,7 +54,10 @@ const Nav = ({ className }) => {
         </Link>
         <ul>
           <Link to="/">
-            <li className="nav-link">New list</li>
+            {/* eslint-disable-next-line */}
+            <li className="nav-link new-list" onClick={addNewList}>
+              New list
+            </li>
           </Link>
           <Link to="/">
             <li className="nav-link">Lists</li>

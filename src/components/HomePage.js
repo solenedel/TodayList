@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { v4 as uuid } from 'uuid';
 import ListContainer from './ListContainer';
 
 // unique local storage key to store the todos
 const LOCAL_STORAGE_KEY = 'todaylist-todos';
 
 // eslint-disable-next-line
-export const HomePage = ({ className }) => {
+export const HomePage = ({ className, lists }) => {
   // eslint-disable-next-line
   const [todos, setTodos] = useState([]);
-
-  const [lists, setLists] = useState([]);
 
   // render todos saved in local storage (on refresh)
   useEffect(() => {
@@ -56,19 +53,6 @@ export const HomePage = ({ className }) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  // add a new list
-  const addNewList = () => {
-    const newList = {
-      id: uuid(),
-    };
-
-    /*
-     * when you pass an anon function in a useState function, the anon func argument will
-     * always be the most recent value of the state variable
-     */
-    setLists((prev) => [...prev, newList]);
-  };
-
   // delete a list
   const deleteList = (id) => {
     // eslint-disable-next-line
@@ -87,7 +71,6 @@ export const HomePage = ({ className }) => {
           removeTodo={removeTodo}
           toggleComplete={toggleComplete}
           deleteList={deleteList}
-          addNewList={addNewList}
         />
       ))}
       {/* <button className="btn new-list" type="button" onClick={addNewList}>

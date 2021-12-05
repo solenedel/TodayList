@@ -7,6 +7,37 @@ export const StyledNav = styled(Nav)`
   height: 110px;
   /* border: solid red 3px; */
 
+  .new-list {
+    margin-right: 80px;
+    font-weight: 600;
+    animation: color-change 1.5s infinite;
+    /* animation: size 1.5s infinite; */
+    font-size: 35px;
+  }
+
+  /* @keyframes size {
+    0% {
+      font-size: 35px;
+    }
+    50% {
+      font-size: 40px;
+    }
+    100% {
+      font-size: 35px;
+    }
+  } */
+  @keyframes color-change {
+    0% {
+      color: ${colorVars.primaryYellow};
+    }
+    50% {
+      color: ${colorVars.primaryGreen};
+    }
+    100% {
+      color: ${colorVars.primaryYellow};
+    }
+  }
+
   & #nav-flexbox {
     z-index: 2;
     display: flex;
