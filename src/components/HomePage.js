@@ -5,7 +5,7 @@ import ListContainer from './ListContainer';
 const LOCAL_STORAGE_KEY = 'todaylist-todos';
 
 // eslint-disable-next-line
-export const HomePage = ({ className, lists }) => {
+export const HomePage = ({ className, lists, addNewList, deleteList }) => {
   // eslint-disable-next-line
   const [todos, setTodos] = useState([]);
 
@@ -51,12 +51,6 @@ export const HomePage = ({ className, lists }) => {
   const removeTodo = (id) => {
     console.log('REMOVE TODO: ID ', id);
     setTodos(todos.filter((todo) => todo.id !== id));
-  };
-
-  // delete a list
-  const deleteList = (id) => {
-    // eslint-disable-next-line
-    setLists((prev) => [...prev.filter((list) => list.id !== id)]); // spread new array so that you don't mutate original array
   };
 
   return (

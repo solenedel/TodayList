@@ -31,7 +31,7 @@ export const StyledNav = styled(Nav)`
       color: ${colorVars.primaryYellow};
     }
     50% {
-      color: ${colorVars.primaryGreen};
+      color: #a890ff;
     }
     100% {
       color: ${colorVars.primaryYellow};

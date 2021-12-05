@@ -28,6 +28,12 @@ function App() {
     setLists((prev) => [...prev, newList]);
   };
 
+  // delete a list
+  const deleteList = (id) => {
+    // eslint-disable-next-line
+    setLists((prev) => [...prev.filter((list) => list.id !== id)]); // spread new array so that you don't mutate original array
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -37,11 +43,11 @@ function App() {
       <Router>
         <AppContainer>
           <GlobalStyles />
-          <StyledNav addNewList={addNewList} lists={lists} />
+          <StyledNav deleteList={deleteList} addNewList={addNewList} lists={lists} />
           <PageContainer>
             <Switch>
               <Route exact path="/">
-                <StyledHomePage lists={lists} />
+                <StyledHomePage deleteList={deleteList} addNewList={addNewList} lists={lists} />
               </Route>
               <Route exact path="/login">
                 <StyledLoginPage />
