@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 
 // eslint-disable-next-line
-const TodoForm = ({ addTodo }) => {
+const TodoForm = ({ addTodo, listId }) => {
   const [todo, setTodo] = useState({
     id: '',
+    listId,
     task: '',
     completed: false,
   });

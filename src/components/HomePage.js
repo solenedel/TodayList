@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import TodoForm from './TodoForm';
-import TodoList from './TodoList';
+import { v4 as uuid } from 'uuid';
+import ListContainer from './ListContainer';
 
 // unique local storage key to store the todos
 const LOCAL_STORAGE_KEY = 'todaylist-todos';
@@ -9,6 +9,8 @@ const LOCAL_STORAGE_KEY = 'todaylist-todos';
 export const HomePage = ({ className }) => {
   // eslint-disable-next-line
   const [todos, setTodos] = useState([]);
+
+  const [lists, setLists] = useState([]);
 
   // render todos saved in local storage (on refresh)
   useEffect(() => {
@@ -27,6 +29,8 @@ export const HomePage = ({ className }) => {
   // add a task to the todo list
   const addTodo = (todo) => {
     setTodos([todo, ...todos]);
+    console.log('ADD TODO: ID ', todo.id);
+    console.log('todo', todo);
   };
 
   // toggle to complete a task
@@ -48,21 +52,47 @@ export const HomePage = ({ className }) => {
 
   // delete a todo
   const removeTodo = (id) => {
+    console.log('REMOVE TODO: ID ', id);
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  // add a new list
+  const addNewList = () => {
+    const newList = {
+      id: uuid(),
+    };
+
+    /*
+     * when you pass an anon function in a useState function, the anon func argument will
+     * always be the most recent value of the state variable
+     */
+    setLists((prev) => [...prev, newList]);
+  };
+
+  // delete a list
+  const deleteList = (id) => {
+    // eslint-disable-next-line
+    setLists((prev) => [...prev.filter((list) => list.id !== id)]); // spread new array so that you don't mutate original array
+  };
+
   return (
-    <main className={className} id="home-page-container">
-      <div className="today list">
-        <h2>Today</h2>
-        <TodoForm id="today" className="today" addTodo={addTodo} />
-        <TodoList todos={todos} toggleComplete={toggleComplete} removeTodo={removeTodo} />
-      </div>
-      <div className="tomorrow list">
-        <h2>Tomorrow</h2>
-        <TodoForm id="tomorrow" className="tomorrow" addTodo={addTodo} />
-        <TodoList todos={todos} toggleComplete={toggleComplete} removeTodo={removeTodo} />
-      </div>
+    <main className={className}>
+      {/* eslint-disable-next-line */}
+      {lists.map((list) => (
+        <ListContainer
+          key={list.id}
+          list={list}
+          todos={todos.filter((todo) => todo.listId === list.id)}
+          addTodo={addTodo}
+          removeTodo={removeTodo}
+          toggleComplete={toggleComplete}
+          deleteList={deleteList}
+          addNewList={addNewList}
+        />
+      ))}
+      <button type="button" onClick={addNewList}>
+        New list
+      </button>
     </main>
   );
 };
