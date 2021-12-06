@@ -11,21 +11,9 @@ export const StyledNav = styled(Nav)`
     margin-right: 80px;
     font-weight: 600;
     animation: color-change 1.5s infinite;
-    /* animation: size 1.5s infinite; */
     font-size: 35px;
   }
 
-  /* @keyframes size {
-    0% {
-      font-size: 35px;
-    }
-    50% {
-      font-size: 40px;
-    }
-    100% {
-      font-size: 35px;
-    }
-  } */
   @keyframes color-change {
     0% {
       color: ${colorVars.primaryYellow};
@@ -47,8 +35,8 @@ export const StyledNav = styled(Nav)`
 
   div#logo {
     margin-top: 15px;
-    margin-left: 25px;
-    font-size: 60px;
+    margin-left: 40px;
+    font-size: 50px;
     font-family: 'Righteous', cursive;
     color: ${colorVars.primaryGreen};
   }

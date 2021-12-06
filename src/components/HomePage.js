@@ -53,8 +53,21 @@ export const HomePage = ({ className, lists, addNewList, deleteList }) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
+  // eslint-disable-next-line
+  const showLists = () => {
+    // eslint-disable-next-line
+    if (!lists.length) {
+      return (
+        <p id="no-list-yet">
+          You have no lists yet! Click on <span>New list</span> to get started.
+        </p>
+      );
+    }
+  };
+
   return (
     <main className={className}>
+      {showLists()}
       {/* eslint-disable-next-line */}
       {lists.map((list) => (
         <ListContainer
@@ -67,9 +80,6 @@ export const HomePage = ({ className, lists, addNewList, deleteList }) => {
           deleteList={deleteList}
         />
       ))}
-      {/* <button className="btn new-list" type="button" onClick={addNewList}>
-        New list
-      </button> */}
     </main>
   );
 };

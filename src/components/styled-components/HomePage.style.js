@@ -15,6 +15,11 @@ export const StyledHomePage = styled(HomePage)`
   font-size: 20px;
   margin-top: 50px;
 
+  #no-list-yet {
+    margin-left: 50px;
+    font-size: 25px;
+  }
+
   form {
     display: flex;
     justify-content: space-between;
