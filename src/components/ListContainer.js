@@ -21,7 +21,7 @@ const ListContainer = ({
   return (
     <section key={list.id}>
       <div className="today list">
-        <h2>Today</h2>
+        <h2>my list</h2>
         <TodoForm className="today" addTodo={addTodo} listId={list.id} />
         <TodoList
           todos={todos}

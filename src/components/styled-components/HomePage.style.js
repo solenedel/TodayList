@@ -4,7 +4,6 @@ import { HomePage } from '../HomePage';
 import { colorVars, fontVars } from './css-variables';
 
 export const StyledHomePage = styled(HomePage)`
-  border: solid blue 3px;
   /* height: 100vh; */
   /* width: fit-content; */
   height: fit-content;
