@@ -19,6 +19,7 @@ function App() {
   const addNewList = () => {
     const newList = {
       id: uuid(),
+      name: 'my list',
     };
 
     /*
@@ -34,6 +35,13 @@ function App() {
     setLists((prev) => [...prev.filter((list) => list.id !== id)]); // spread new array so that you don't mutate original array
   };
 
+  // rename a list
+  const renameList = (newName) => {
+    // eslint-disable-next-line
+    console.log('renamed list to: ' + newName);
+    return <h2>{newName}</h2>;
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -47,7 +55,12 @@ function App() {
           <PageContainer>
             <Switch>
               <Route exact path="/">
-                <StyledHomePage deleteList={deleteList} addNewList={addNewList} lists={lists} />
+                <StyledHomePage
+                  deleteList={deleteList}
+                  addNewList={addNewList}
+                  renameList={renameList}
+                  lists={lists}
+                />
               </Route>
               <Route exact path="/login">
                 <StyledLoginPage />
