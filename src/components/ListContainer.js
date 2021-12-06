@@ -51,7 +51,14 @@ const ListContainer = ({
         >
           Rename list
         </button>
-        {isOpenRename && <div>TEST</div>}
+        {isOpenRename && (
+          <form id="rename-form">
+            <input type="text" placeholder="new name" />
+            <button id="rename-btn" type="button">
+              confirm
+            </button>
+          </form>
+        )}
       </div>
     </section>
   );

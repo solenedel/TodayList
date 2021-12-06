@@ -15,6 +15,18 @@ export const StyledHomePage = styled(HomePage)`
   font-size: 20px;
   margin-top: 50px;
 
+  #rename-btn {
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 18px;
+    background: ${colorVars.primaryGreen};
+    color: black;
+  }
+
+  #rename-form {
+    margin-top: 20px;
+  }
+
   #no-list-yet {
     margin-left: 50px;
     font-size: 25px;

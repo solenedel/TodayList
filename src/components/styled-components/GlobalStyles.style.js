@@ -11,6 +11,10 @@ export const GlobalStyles = createGlobalStyle`
   font-family: ${fontVars.mainFont};
 }
 
+button:hover, a:hover {
+  cursor: pointer;
+}
+
 a,
   a:visited {
     text-decoration: none;
