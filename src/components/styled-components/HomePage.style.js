@@ -24,6 +24,7 @@ export const StyledHomePage = styled(HomePage)`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 15px;
 
     & input {
       padding-left: 8px;
@@ -47,7 +48,7 @@ export const StyledHomePage = styled(HomePage)`
       border: none;
 
       & i {
-        color: ${colorVars.primaryYellow};
+        color: ${colorVars.primaryGreen};
         font-size: 40px;
 
         :hover {
