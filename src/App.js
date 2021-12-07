@@ -37,24 +37,18 @@ function App() {
 
   // rename a list
   const renameList = (listId, name) => {
-    // make shallow copy of lists array
     const listsCopy = [...lists];
 
     const isListToRename = (list) => list.id === listId;
 
     const listIndex = listsCopy.findIndex(isListToRename);
 
-    // update the list who's name you are changing in new array copy
     listsCopy.splice(listIndex, 1, {
       ...listsCopy[listIndex],
       name,
     });
 
     setLists(listsCopy);
-
-    console.log('listId, name', listId, name);
-    console.log('listsCopy', listsCopy);
-    console.log('listIndex', listIndex);
   };
 
   return (

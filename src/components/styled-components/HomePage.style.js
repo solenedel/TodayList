@@ -63,10 +63,6 @@ export const StyledHomePage = styled(HomePage)`
         color: ${colorVars.primaryGreen};
         font-size: 40px;
 
-        :hover {
-          color: ${colorVars.primaryBlue};
-        }
-
         :active {
           transform: translateY(4px);
         }

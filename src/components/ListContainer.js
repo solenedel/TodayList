@@ -31,6 +31,7 @@ const ListContainer = ({
     e.preventDefault();
 
     renameList(list.id, rename);
+    setIsOpenRename(false);
     // console.log('e.target.value', e.target.value);
   };
 
