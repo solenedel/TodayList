@@ -6,6 +6,7 @@ const colorVars = {
   primaryYellow: '#fffdc4',
   primaryBlue: '#A3BBFC',
   linkHover: '#FFF2C6',
+  // delete: '#A33955',
 };
 
 // fonts

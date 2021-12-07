@@ -4,8 +4,6 @@ import { HomePage } from '../HomePage';
 import { colorVars, fontVars } from './css-variables';
 
 export const StyledHomePage = styled(HomePage)`
-  /* height: 100vh; */
-  /* width: fit-content; */
   height: fit-content;
   width: 100vw;
   display: flex;
@@ -141,6 +139,33 @@ export const StyledHomePage = styled(HomePage)`
         background: ${colorVars.primaryYellow};
         color: black;
       }
+    }
+  }
+
+  #remove-todo-btn {
+    background: none;
+    border: none;
+    height: 25px;
+
+    & i {
+      font-size: 25px;
+    }
+  }
+
+  #todo-input {
+    display: flex;
+
+    & li {
+      color: 'black';
+    }
+
+    & input {
+      margin-right: 8px;
+    }
+
+    .todo-item {
+      display: flex;
+      align-items: baseline;
     }
   }
 `;

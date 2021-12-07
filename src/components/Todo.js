@@ -13,18 +13,19 @@ const Todo = ({ todo, toggleComplete, removeTodo }) => {
   };
 
   return (
-    <div style={{ display: 'flex' }}>
-      <input type="checkbox" /* checked={todo.completed} */ onClick={handleCheckboxClick} />
-      <li
-        style={{
-          color: 'white',
-          textDecoration: todo.completed ? 'line-through' : null,
-        }}
-      >
-        {todo.task}
-      </li>
-      <button type="button" onClick={handleRemoveClick}>
-        X
+    <div id="todo-input">
+      <div className="todo-item">
+        <input type="checkbox" checked={todo.completed} onClick={handleCheckboxClick} />
+        <li
+          style={{
+            textDecoration: todo.completed ? 'line-through' : null,
+          }}
+        >
+          {todo.task}
+        </li>
+      </div>
+      <button id="remove-todo-btn" type="button" onClick={handleRemoveClick}>
+        <i className="fas fa-times" />
       </button>
     </div>
   );
