@@ -5,7 +5,7 @@ import ListContainer from './ListContainer';
 const LOCAL_STORAGE_KEY = 'todaylist-todos';
 
 // eslint-disable-next-line
-export const HomePage = ({ className, lists, addNewList, deleteList }) => {
+export const HomePage = ({ className, lists, addNewList, deleteList, renameList }) => {
   // eslint-disable-next-line
   const [todos, setTodos] = useState([]);
 
@@ -78,6 +78,8 @@ export const HomePage = ({ className, lists, addNewList, deleteList }) => {
           removeTodo={removeTodo}
           toggleComplete={toggleComplete}
           deleteList={deleteList}
+          renameList={renameList}
+          lists={lists}
         />
       ))}
     </main>

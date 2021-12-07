@@ -19,6 +19,7 @@ function App() {
   const addNewList = () => {
     const newList = {
       id: uuid(),
+      name: 'my list',
     };
 
     /*
@@ -34,6 +35,28 @@ function App() {
     setLists((prev) => [...prev.filter((list) => list.id !== id)]); // spread new array so that you don't mutate original array
   };
 
+  // rename a list
+  const renameList = (listId, name) => {
+    // make shallow copy of lists array
+    const listsCopy = [...lists];
+
+    const isListToRename = (list) => list.id === listId;
+
+    const listIndex = listsCopy.findIndex(isListToRename);
+
+    // update the list who's name you are changing in new array copy
+    listsCopy.splice(listIndex, 1, {
+      ...listsCopy[listIndex],
+      name,
+    });
+
+    setLists(listsCopy);
+
+    console.log('listId, name', listId, name);
+    console.log('listsCopy', listsCopy);
+    console.log('listIndex', listIndex);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -47,7 +70,12 @@ function App() {
           <PageContainer>
             <Switch>
               <Route exact path="/">
-                <StyledHomePage deleteList={deleteList} addNewList={addNewList} lists={lists} />
+                <StyledHomePage
+                  deleteList={deleteList}
+                  addNewList={addNewList}
+                  lists={lists}
+                  renameList={renameList}
+                />
               </Route>
               <Route exact path="/login">
                 <StyledLoginPage />
