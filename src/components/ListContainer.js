@@ -11,10 +11,11 @@ const ListContainer = ({
   removeTodo,
   toggleComplete,
   deleteList,
-  lists,
+  renameList,
 }) => {
   // state for collapsible 'rename list' button
   const [isOpenRename, setIsOpenRename] = useState(false);
+  const [rename, setRename] = useState('');
 
   // handle deleting a list when clicking on delete button
   const handleDeleteList = (id) => {
@@ -23,28 +24,20 @@ const ListContainer = ({
   };
 
   const handleRenameInputChange = (e) => {
-    // eslint-disable-next-line
-    list.name = e.target.value;
+    setRename(e.target.value);
   };
 
   const handleRenameFormSubmit = (e) => {
     e.preventDefault();
-    // eslint-disable-next-line
 
-    // make shallow copy of lists array
-    const listsCopy = [...lists];
-
-    // update the list who's name you are changing in new array copy
-    listsCopy.name = e.target.value;
-
-    console.log('listsCopy: ', listsCopy);
-    // renameList();
+    renameList(list.id, rename);
+    // console.log('e.target.value', e.target.value);
   };
 
   return (
     <section key={list.id}>
       <div className="today list">
-        {/* {renameList('my list')} */}
+        <h2>{list.name}</h2>
         <TodoForm className="today" addTodo={addTodo} listId={list.id} />
         <TodoList
           todos={todos}
