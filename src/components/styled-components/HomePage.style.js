@@ -152,20 +152,25 @@ export const StyledHomePage = styled(HomePage)`
     }
   }
 
+  ul {
+    width: fit-content;
+  }
+
   #todo-input {
+    border: solid red 3px;
+    width: 30vw;
     display: flex;
+    justify-content: space-between;
 
     & li {
-      color: 'black';
-    }
-
-    & input {
-      margin-right: 8px;
+      word-wrap: break-word;
     }
 
     .todo-item {
+      width: 90%;
       display: flex;
       align-items: baseline;
+      word-wrap: break-word;
     }
   }
 `;
