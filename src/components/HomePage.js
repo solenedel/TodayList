@@ -79,6 +79,7 @@ export const HomePage = ({ className, lists, addNewList, deleteList, renameList 
           toggleComplete={toggleComplete}
           deleteList={deleteList}
           renameList={renameList}
+          lists={lists}
         />
       ))}
     </main>

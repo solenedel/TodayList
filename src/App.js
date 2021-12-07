@@ -36,11 +36,11 @@ function App() {
   };
 
   // rename a list
-  const renameList = (newName) => {
-    // eslint-disable-next-line
-    console.log('renamed list to: ' + newName);
-    return <h2>{newName}</h2>;
-  };
+  // const renameList = () => {
+  //   setLists((prev) => [...prev]);
+  //   // console.log(`renamed list to: ${newName}`);
+  //   // return <h2>{newName}</h2>;
+  // };
 
   return (
     <AppContext.Provider
@@ -55,12 +55,7 @@ function App() {
           <PageContainer>
             <Switch>
               <Route exact path="/">
-                <StyledHomePage
-                  deleteList={deleteList}
-                  addNewList={addNewList}
-                  renameList={renameList}
-                  lists={lists}
-                />
+                <StyledHomePage deleteList={deleteList} addNewList={addNewList} lists={lists} />
               </Route>
               <Route exact path="/login">
                 <StyledLoginPage />

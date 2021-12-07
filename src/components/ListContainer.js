@@ -11,7 +11,7 @@ const ListContainer = ({
   removeTodo,
   toggleComplete,
   deleteList,
-  renameList,
+  lists,
 }) => {
   // state for collapsible 'rename list' button
   const [isOpenRename, setIsOpenRename] = useState(false);
@@ -22,15 +22,29 @@ const ListContainer = ({
     console.log('LIST DELETED, id:', list.id);
   };
 
-  // handle renaming a list
-  // const handleRenameList = (id) => {
-  //   renameList(lol);
-  // };
+  const handleRenameInputChange = (e) => {
+    // eslint-disable-next-line
+    list.name = e.target.value;
+  };
+
+  const handleRenameFormSubmit = (e) => {
+    e.preventDefault();
+    // eslint-disable-next-line
+
+    // make shallow copy of lists array
+    const listsCopy = [...lists];
+
+    // update the list who's name you are changing in new array copy
+    listsCopy.name = e.target.value;
+
+    console.log('listsCopy: ', listsCopy);
+    // renameList();
+  };
 
   return (
     <section key={list.id}>
       <div className="today list">
-        {renameList('my list')}
+        {/* {renameList('my list')} */}
         <TodoForm className="today" addTodo={addTodo} listId={list.id} />
         <TodoList
           todos={todos}
@@ -52,9 +66,9 @@ const ListContainer = ({
           Rename list
         </button>
         {isOpenRename && (
-          <form id="rename-form">
-            <input type="text" placeholder="new name" />
-            <button id="rename-btn" type="button">
+          <form id="rename-form" onSubmit={handleRenameFormSubmit}>
+            <input type="text" placeholder="new name" onChange={handleRenameInputChange} />
+            <button id="rename-btn" type="submit">
               confirm
             </button>
           </form>
