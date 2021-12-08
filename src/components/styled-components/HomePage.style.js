@@ -18,6 +18,10 @@ export const StyledHomePage = styled(HomePage)`
     font-size: 18px;
     background: ${colorVars.primaryGreen};
     color: black;
+
+    :active {
+      transform: translateY(4px);
+    }
   }
 
   #rename-form {
@@ -157,6 +161,10 @@ export const StyledHomePage = styled(HomePage)`
         background: #fca4a3;
         color: black;
       }
+
+      /* :active {
+        transform: translateY(4px);
+      } */
     }
 
     &.new-list {
@@ -214,10 +222,10 @@ export const StyledHomePage = styled(HomePage)`
       word-wrap: break-word;
       margin-bottom: 10px;
 
-      &:hover {
+      /* &:hover {
         background: ${colorVars.primaryGreen};
         border-radius: 5px;
-      }
+      } */
     }
   }
 
@@ -229,6 +237,14 @@ export const StyledHomePage = styled(HomePage)`
   }
 
   @media screen and (max-width: 440px) {
+    form input {
+      font-size: 18px;
+
+      &::placeholder {
+        font-size: 18px;
+      }
+    }
+
     li {
       width: 60vw;
       font-size: 18px;
