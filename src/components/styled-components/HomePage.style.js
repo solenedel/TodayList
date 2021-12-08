@@ -37,6 +37,25 @@ export const StyledHomePage = styled(HomePage)`
     margin: 60px 0px 60px 10px;
   }
 
+  .todo-optns {
+    /* border: solid blue 2px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5px;
+    align-self: flex-start;
+    margin-top: 2px;
+
+    & i {
+      font-size: 16px !important;
+      color: maroon;
+      padding: 0;
+      margin: 0 0 0 0.5px;
+      opacity: 0.7;
+    }
+  }
+
   .list-container {
     margin-bottom: 90px;
     margin-left: 2vw;
@@ -189,10 +208,16 @@ export const StyledHomePage = styled(HomePage)`
     }
 
     .todo-item {
-      width: 90%;
+      width: 95%;
       display: flex;
-      align-items: baseline;
+      align-items: center;
       word-wrap: break-word;
+      margin-bottom: 10px;
+
+      &:hover {
+        background: ${colorVars.primaryGreen};
+        border-radius: 5px;
+      }
     }
   }
 
@@ -203,7 +228,7 @@ export const StyledHomePage = styled(HomePage)`
     }
   }
 
-  @media screen and (max-width: 400px) {
+  @media screen and (max-width: 440px) {
     .list-container {
       width: 80vw;
       /* display: flex;
@@ -213,11 +238,23 @@ export const StyledHomePage = styled(HomePage)`
 
       & ul {
         max-width: 100%;
+        padding: 2px;
       }
     }
-  }
 
-  .list {
-    margin: 20px 0 0 0;
+    /* #todo-input {
+      max-width: 80%;
+    } */
+
+    .fa-times {
+      font-size: 12px;
+    }
+    .list {
+      margin: 20px 0 0 0;
+    }
+
+    .todo-item {
+      /* border: solid red 3px; */
+    }
   }
 `;

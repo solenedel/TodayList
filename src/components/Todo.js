@@ -15,7 +15,13 @@ const Todo = ({ todo, toggleComplete, removeTodo }) => {
   return (
     <div id="todo-input">
       <div className="todo-item">
-        <input type="checkbox" checked={todo.completed} onClick={handleCheckboxClick} />
+        <div className="todo-optns">
+          <input type="checkbox" checked={todo.completed} onClick={handleCheckboxClick} />
+          <button id="remove-todo-btn" type="button" onClick={handleRemoveClick}>
+            <i className="fas fa-times" />
+          </button>
+        </div>
+
         <li
           style={{
             textDecoration: todo.completed ? 'line-through' : null,
@@ -24,9 +30,6 @@ const Todo = ({ todo, toggleComplete, removeTodo }) => {
           {todo.task}
         </li>
       </div>
-      <button id="remove-todo-btn" type="button" onClick={handleRemoveClick}>
-        <i className="fas fa-times" />
-      </button>
     </div>
   );
 };
