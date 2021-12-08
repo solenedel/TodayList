@@ -15,6 +15,10 @@ button:hover, a:hover {
   cursor: pointer;
 }
 
+button:active {
+  transform: translateY(5px);
+}
+
 html, body {
     height: 100%;
 }

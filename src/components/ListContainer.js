@@ -58,7 +58,7 @@ const ListContainer = ({
         )}
         <div className="btn-container">
           <button className="btn delete" type="button" onClick={() => handleDeleteList(list.id)}>
-            Delete
+            Delete list
           </button>
           <button
             className="btn rename"
@@ -67,7 +67,7 @@ const ListContainer = ({
               setIsOpenRename(!isOpenRename);
             }}
           >
-            Rename
+            Rename list
           </button>
         </div>
         <div className="rename">
