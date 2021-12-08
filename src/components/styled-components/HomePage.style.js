@@ -229,12 +229,20 @@ export const StyledHomePage = styled(HomePage)`
   }
 
   @media screen and (max-width: 440px) {
+    li {
+      width: 60vw;
+      font-size: 18px;
+      padding-right: 5px;
+    }
+
+    ul li {
+      margin-bottom: 25px;
+      min-width: 50px;
+      color: black;
+    }
+
     .list-container {
       width: 80vw;
-      /* display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start; */
 
       & ul {
         max-width: 100%;
@@ -242,19 +250,11 @@ export const StyledHomePage = styled(HomePage)`
       }
     }
 
-    /* #todo-input {
-      max-width: 80%;
-    } */
-
     .fa-times {
       font-size: 12px;
     }
     .list {
       margin: 20px 0 0 0;
-    }
-
-    .todo-item {
-      /* border: solid red 3px; */
     }
   }
 `;
