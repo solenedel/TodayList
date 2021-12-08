@@ -38,14 +38,16 @@ export const StyledHomePage = styled(HomePage)`
   }
 
   .list-container {
-    margin-bottom: 70px;
+    margin-bottom: 90px;
+    margin-left: 2vw;
+    margin-right: 2vw;
   }
 
   form {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
     & input {
       padding-left: 8px;
@@ -86,8 +88,9 @@ export const StyledHomePage = styled(HomePage)`
 
   & h2 {
     font-family: ${fontVars.mainFont};
+    font-size: 34px;
     margin-bottom: 20px;
-    font-weight: 400;
+    font-weight: 600;
   }
 
   .today h2 {
@@ -101,8 +104,8 @@ export const StyledHomePage = styled(HomePage)`
 
   ul {
     border-radius: 6px;
-    padding: 20px;
-    margin-bottom: 50px;
+    padding: 20px 20px 0 20px;
+    margin-bottom: 30px;
 
     & li {
       margin-bottom: 25px;
@@ -115,16 +118,20 @@ export const StyledHomePage = styled(HomePage)`
     }
   }
 
+  .btn-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
   button.btn {
     font-size: 20px;
     border: none;
     border-radius: 5px;
     padding: 5px;
     background: none;
-    margin-left: 20px;
 
     &.delete {
-      border: solid 3px #fca4a3;
+      border: solid 2px #fca4a3;
       color: #fca4a3;
 
       &:hover {
@@ -134,7 +141,7 @@ export const StyledHomePage = styled(HomePage)`
     }
 
     &.new-list {
-      border: solid 3px ${colorVars.primaryGreen};
+      border: solid 2px ${colorVars.primaryGreen};
       color: ${colorVars.primaryGreen};
 
       &:hover {
@@ -144,7 +151,7 @@ export const StyledHomePage = styled(HomePage)`
     }
 
     &.rename {
-      border: solid 3px ${colorVars.primaryYellow};
+      border: solid 2px ${colorVars.primaryYellow};
       color: ${colorVars.primaryYellow};
 
       &:hover {
@@ -194,5 +201,23 @@ export const StyledHomePage = styled(HomePage)`
       font-size: 20px;
       padding: 0 20px 0 0;
     }
+  }
+
+  @media screen and (max-width: 400px) {
+    .list-container {
+      width: 80vw;
+      /* display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start; */
+
+      & ul {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .list {
+    margin: 20px 0 0 0;
   }
 `;

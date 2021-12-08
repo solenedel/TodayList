@@ -5,13 +5,13 @@ import { colorVars } from './css-variables';
 
 export const StyledNav = styled(Nav)`
   height: 100px;
-  background: rgba(55, 220, 212, 0.95);
+  border-bottom: solid 2.8px rgba(55, 220, 212, 0.95);
   padding-top: 8px;
-  /* border: solid red 3px; */
+  background: rgba(55, 220, 212, 0.25);
 
   .new-list {
-    border: solid black 3px;
-    background: black;
+    /* border: solid black 3px; */
+    /* background: black; */
     border-radius: 8px;
     padding: 0 7px 0 7px;
     margin-right: 40px;
@@ -36,15 +36,14 @@ export const StyledNav = styled(Nav)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: solid blue 3px; */
   }
 
   div#logo {
     margin-top: 15px;
     margin-left: 40px;
-    font-size: 50px;
+    font-size: 45px;
     font-family: 'Righteous', cursive;
-    color: black;
+    color: rgba(55, 220, 212, 1);
   }
 
   & ul {

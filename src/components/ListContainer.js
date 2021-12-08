@@ -56,27 +56,28 @@ const ListContainer = ({
         ) : (
           showListItems()
         )}
-
-        <button className="btn delete" type="button" onClick={() => handleDeleteList(list.id)}>
-          Delete list
-        </button>
-        <button
-          className="btn rename"
-          type="button"
-          onClick={() => {
-            setIsOpenRename(!isOpenRename);
-          }}
-        >
-          Rename list
-        </button>
-        {isOpenRename && (
-          <form id="rename-form" onSubmit={handleRenameFormSubmit}>
-            <input type="text" placeholder="new name" onChange={handleRenameInputChange} />
-            <button id="rename-btn" type="submit">
-              confirm
-            </button>
-          </form>
-        )}
+        <div className="btn-container">
+          <button className="btn delete" type="button" onClick={() => handleDeleteList(list.id)}>
+            Delete
+          </button>
+          <button
+            className="btn rename"
+            type="button"
+            onClick={() => {
+              setIsOpenRename(!isOpenRename);
+            }}
+          >
+            Rename
+          </button>
+          {isOpenRename && (
+            <form id="rename-form" onSubmit={handleRenameFormSubmit}>
+              <input type="text" placeholder="new name" onChange={handleRenameInputChange} />
+              <button id="rename-btn" type="submit">
+                confirm
+              </button>
+            </form>
+          )}
+        </div>
       </div>
     </section>
   );
