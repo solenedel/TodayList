@@ -5,11 +5,14 @@ import { colorVars } from './css-variables';
 
 export const StyledFooter = styled(Footer)`
   div.credits {
+    height: 50px;
     display: flex;
     justify-content: space-between;
-    padding: 0 30px 0 30px;
-    margin: 0 0 30px 0;
+    align-items: center;
+    padding: 15px 30px 10px 30px;
+    margin: 50px 0 30px 0;
     width: 100%;
+    border-top: solid ${colorVars.primaryBlue} 2px;
 
     p {
       color: ${colorVars.primaryPink};
@@ -17,6 +20,17 @@ export const StyledFooter = styled(Footer)`
 
     a {
       color: ${colorVars.primaryBlue};
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    div.credits {
+      flex-direction: column;
+      align-items: flex-start;
+
+      & p {
+        margin-bottom: 5px;
+      }
     }
   }
 `;

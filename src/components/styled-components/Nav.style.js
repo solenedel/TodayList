@@ -6,6 +6,8 @@ import { colorVars } from './css-variables';
 export const StyledNav = styled(Nav)`
   height: 100px;
   background: rgba(55, 220, 212, 0.95);
+  padding-top: 8px;
+  /* border: solid red 3px; */
 
   .new-list {
     border: solid black 3px;
@@ -31,10 +33,10 @@ export const StyledNav = styled(Nav)`
   }
 
   & #nav-flexbox {
-    margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    /* border: solid blue 3px; */
   }
 
   div#logo {
