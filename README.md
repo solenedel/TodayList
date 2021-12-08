@@ -1,17 +1,16 @@
 # 📝 TodayList
 
-To-do list app using PERN (Postgres, Express, React, Node) stack.
+To-do list app using ReactJS. The app is deployed [here](https://solenedel.github.io/TodayList/).
+The deployed app is front-end only. The full-stack version will be in a separate branch of the repo. 
+
+## Demo
+
+
+
+
+## Project setup
 
 To run in development mode: `npm run dev`
-
-## Setting up the database
-
-After creating a Postgres database, in PSQL run:
-
-1. `\i server/db/schema.sql`
-2. `\i server/db/seeds.sql`
-
-To reset the database subsequently, run in the node terminal: `npm run reset-db`
 
 ## Broken / to fix
 
