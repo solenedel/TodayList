@@ -4,10 +4,11 @@ import Nav from '../Nav';
 import { colorVars } from './css-variables';
 
 export const StyledNav = styled(Nav)`
-  height: 110px;
+  height: 100px;
+  border-bottom: solid 2px ${colorVars.primaryGreen};
 
   .new-list {
-    margin-right: 80px;
+    margin-right: 40px;
     font-weight: 600;
     animation: color-change 1.5s infinite;
     font-size: 35px;
@@ -26,10 +27,10 @@ export const StyledNav = styled(Nav)`
   }
 
   & #nav-flexbox {
-    z-index: 2;
+    margin-top: 30px;
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: flex-end;
   }
 
   div#logo {
@@ -60,6 +61,36 @@ export const StyledNav = styled(Nav)`
         color: ${colorVars.linkHover};
         transition: color 0.4s;
       }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    ul {
+      padding: 0;
+      margin-right: 0;
+    }
+    .new-list {
+      margin-right: 0;
+      font-size: 28px;
+      letter-spacing: -1.2px;
+      position: relative;
+      left: 10px;
+    }
+
+    div#logo {
+      margin-left: 20px;
+      margin-right: 40px;
+      font-size: 38px;
+    }
+  }
+
+  @media screen and (max-width: 370px) {
+    .new-list {
+      font-size: 24px;
+    }
+
+    div#logo {
+      font-size: 32px;
     }
   }
 `;

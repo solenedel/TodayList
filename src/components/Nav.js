@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 // eslint-disable-next-line
-const Nav = ({ className, addNewList, lists }) => {
+const Nav = ({ className, addNewList}) => {
   return (
     <nav className={className}>
       <div id="nav-flexbox">
