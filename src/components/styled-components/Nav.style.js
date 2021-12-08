@@ -5,9 +5,13 @@ import { colorVars } from './css-variables';
 
 export const StyledNav = styled(Nav)`
   height: 100px;
-  background: ${colorVars.primaryGreen};
+  background: rgba(55, 220, 212, 0.95);
 
   .new-list {
+    border: solid black 3px;
+    background: black;
+    border-radius: 8px;
+    padding: 0 7px 0 7px;
     margin-right: 40px;
     font-weight: 600;
     animation: color-change 1.8s infinite;
@@ -16,13 +20,13 @@ export const StyledNav = styled(Nav)`
 
   @keyframes color-change {
     0% {
-      color: #661ef8;
+      color: #b38dff;
     }
     50% {
-      color: #e31acd;
+      color: #ff90f3;
     }
     100% {
-      color: #661ef8;
+      color: #b38dff;
     }
   }
 

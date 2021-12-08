@@ -15,6 +15,10 @@ button:hover, a:hover {
   cursor: pointer;
 }
 
+html, body {
+    height: 100%;
+}
+
 a,
   a:visited {
     text-decoration: none;
