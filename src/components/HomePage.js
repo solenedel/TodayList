@@ -26,8 +26,6 @@ export const HomePage = ({ className, lists, addNewList, deleteList, renameList 
   // add a task to the todo list
   const addTodo = (todo) => {
     setTodos([todo, ...todos]);
-    console.log('ADD TODO: ID ', todo.id);
-    console.log('todo', todo);
   };
 
   // toggle to complete a task
@@ -36,7 +34,6 @@ export const HomePage = ({ className, lists, addNewList, deleteList, renameList 
       todos.map((todo) => {
         // find the selected todo in the todos array
         if (todo.id === id) {
-          console.log('removed: ', todo.id);
           return {
             ...todo,
             completed: !todo.completed, // toggle completion status
@@ -49,7 +46,6 @@ export const HomePage = ({ className, lists, addNewList, deleteList, renameList 
 
   // delete a todo
   const removeTodo = (id) => {
-    console.log('REMOVE TODO: ID ', id);
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 

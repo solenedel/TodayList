@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import { StyledNav } from './components/styled-components/Nav.style';
@@ -10,10 +10,27 @@ import { StyledFooter } from './components/styled-components/Footer.style';
 import { StyledLoginPage } from './components/styled-components/LoginPage.style';
 import { AppContext } from './context';
 
+// unique local storage key to store the todos
+const LOCAL_STORAGE_KEY_LISTS = 'todaylist-lists';
+
 function App() {
   const [user, setUser] = useState({});
 
   const [lists, setLists] = useState([]);
+
+  // persist lists on reload page
+  useEffect(() => {
+    const storageLists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY_LISTS));
+
+    if (storageLists) {
+      setLists(storageLists);
+    }
+  }, []);
+
+  // save lists array to local storage
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY_LISTS, JSON.stringify(lists));
+  }, [lists]);
 
   // add a new list
   const addNewList = () => {
@@ -22,17 +39,13 @@ function App() {
       name: 'my list',
     };
 
-    /*
-     * when you pass an anon function in a useState function, the anon func argument will
-     * always be the most recent value of the state variable
-     */
     setLists((prev) => [...prev, newList]);
   };
 
   // delete a list
   const deleteList = (id) => {
     // eslint-disable-next-line
-    setLists((prev) => [...prev.filter((list) => list.id !== id)]); // spread new array so that you don't mutate original array
+    setLists((prev) => [...prev.filter((list) => list.id !== id)]); 
   };
 
   // rename a list
