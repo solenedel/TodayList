@@ -52,6 +52,8 @@ export const HomePage = ({ className, lists, addNewList, deleteList, renameList 
   // eslint-disable-next-line
   const showLists = () => {
     // eslint-disable-next-line
+    console.log('showLists, lists.length', lists.length);
+    // eslint-disable-next-line
     if (!lists.length) {
       return (
         <p id="no-list-yet">
