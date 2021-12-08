@@ -20,7 +20,6 @@ const ListContainer = ({
   // handle deleting a list when clicking on delete button
   const handleDeleteList = (id) => {
     deleteList(id);
-    console.log('LIST DELETED, id:', list.id);
   };
 
   const handleRenameInputChange = (e) => {
@@ -32,7 +31,13 @@ const ListContainer = ({
 
     renameList(list.id, rename);
     setIsOpenRename(false);
-    // console.log('e.target.value', e.target.value);
+  };
+
+  // eslint-disable-next-line
+  const showListItems = () => {
+    if (!todos.length) {
+      return <div id="no-todos-yet">No tasks have been added.</div>;
+    }
   };
 
   return (
@@ -40,13 +45,18 @@ const ListContainer = ({
       <div className="today list">
         <h2>{list.name}</h2>
         <TodoForm className="today" addTodo={addTodo} listId={list.id} />
-        <TodoList
-          todos={todos}
-          deleteList={deleteList}
-          toggleComplete={toggleComplete}
-          removeTodo={removeTodo}
-          addNewList={addNewList}
-        />
+        {todos.length ? (
+          <TodoList
+            todos={todos}
+            deleteList={deleteList}
+            toggleComplete={toggleComplete}
+            removeTodo={removeTodo}
+            addNewList={addNewList}
+          />
+        ) : (
+          showListItems()
+        )}
+
         <button className="btn delete" type="button" onClick={() => handleDeleteList(list.id)}>
           Delete list
         </button>

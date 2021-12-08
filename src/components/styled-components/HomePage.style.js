@@ -30,6 +30,10 @@ export const StyledHomePage = styled(HomePage)`
     font-size: 25px;
   }
 
+  #no-todos-yet {
+    margin: 60px 0px 60px 10px;
+  }
+
   form {
     display: flex;
     justify-content: space-between;
