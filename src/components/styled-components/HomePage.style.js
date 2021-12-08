@@ -142,7 +142,6 @@ export const StyledHomePage = styled(HomePage)`
   }
 
   .rename {
-    /* border: solid red 3px; */
     display: flex;
     flex-direction: column;
   }
@@ -227,11 +226,6 @@ export const StyledHomePage = styled(HomePage)`
       align-items: center;
       word-wrap: break-word;
       margin-bottom: 10px;
-
-      /* &:hover {
-        background: ${colorVars.primaryGreen};
-        border-radius: 5px;
-      } */
     }
   }
 
@@ -254,7 +248,8 @@ export const StyledHomePage = styled(HomePage)`
     li {
       width: 60vw;
       font-size: 18px;
-      padding-right: 5px;
+      padding: 5px 5px 0 0;
+      align-self: center;
     }
 
     ul li {
