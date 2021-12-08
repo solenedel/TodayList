@@ -38,7 +38,7 @@ export const StyledHomePage = styled(HomePage)`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 
     & input {
       padding-left: 8px;
@@ -47,14 +47,14 @@ export const StyledHomePage = styled(HomePage)`
       font-size: 22px;
       border-radius: 5px;
       margin-right: 10px;
-      border: solid 2px ${colorVars.primaryYellow};
+      border: solid 2px ${colorVars.primaryBlue};
       background: none;
       color: white;
 
       ::placeholder {
         font-size: 22px;
-        color: white;
-        opacity: 0.8;
+        color: ${colorVars.primaryBlue};
+        opacity: 0.9;
       }
     }
 

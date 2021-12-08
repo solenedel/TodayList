@@ -5,7 +5,6 @@ import { colorVars } from './css-variables';
 
 export const StyledNav = styled(Nav)`
   height: 110px;
-  /* border: solid red 3px; */
 
   .new-list {
     margin-right: 80px;
