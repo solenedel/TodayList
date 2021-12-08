@@ -6,11 +6,11 @@ const Nav = ({ className, addNewList}) => {
   return (
     <nav className={className}>
       <div id="nav-flexbox">
-        <Link to="/" id="logo-link">
+        <Link to="/TodayList/" id="logo-link">
           <div id="logo">TodayList</div>
         </Link>
         <ul>
-          <Link to="/">
+          <Link to="/TodayList/">
             {/* eslint-disable-next-line */}
             <li className="nav-link new-list" onClick={addNewList}>
               New list
