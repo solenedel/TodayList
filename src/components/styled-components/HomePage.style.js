@@ -41,15 +41,16 @@ export const StyledHomePage = styled(HomePage)`
       width: 80%;
       height: 40px;
       font-size: 22px;
-      border: none;
       border-radius: 5px;
       margin-right: 10px;
-      background-color: ${colorVars.primaryYellow};
+      border: solid 2px ${colorVars.primaryYellow};
+      background: none;
+      color: white;
 
       ::placeholder {
         font-size: 22px;
-        color: black;
-        opacity: 0.7;
+        color: white;
+        opacity: 0.8;
       }
     }
 
@@ -157,10 +158,13 @@ export const StyledHomePage = styled(HomePage)`
   }
 
   #todo-input {
-    border: solid red 3px;
-    width: 30vw;
+    width: 300px;
     display: flex;
     justify-content: space-between;
+
+    & input {
+      margin-right: 8px;
+    }
 
     & li {
       word-wrap: break-word;

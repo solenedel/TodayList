@@ -37,7 +37,7 @@ const TodoForm = ({ addTodo, listId }) => {
         onChange={handleInputChange}
       />
       <button type="submit" className="tomorrow">
-        <i className="fas fa-plus-square" />
+        <i className="fas fa-plus" />
       </button>
     </form>
   );
