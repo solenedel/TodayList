@@ -41,7 +41,7 @@ const ListContainer = ({
   };
 
   return (
-    <section key={list.id}>
+    <section key={list.id} className="list-container">
       <div className="today list">
         <h2>{list.name}</h2>
         <TodoForm className="today" addTodo={addTodo} listId={list.id} />

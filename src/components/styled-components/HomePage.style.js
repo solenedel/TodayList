@@ -34,6 +34,10 @@ export const StyledHomePage = styled(HomePage)`
     margin: 60px 0px 60px 10px;
   }
 
+  .list-container {
+    margin-bottom: 70px;
+  }
+
   form {
     display: flex;
     justify-content: space-between;

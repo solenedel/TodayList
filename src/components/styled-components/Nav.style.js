@@ -5,24 +5,24 @@ import { colorVars } from './css-variables';
 
 export const StyledNav = styled(Nav)`
   height: 100px;
-  border-bottom: solid 2px ${colorVars.primaryGreen};
+  background: ${colorVars.primaryGreen};
 
   .new-list {
     margin-right: 40px;
     font-weight: 600;
-    animation: color-change 1.5s infinite;
+    animation: color-change 1.8s infinite;
     font-size: 35px;
   }
 
   @keyframes color-change {
     0% {
-      color: ${colorVars.primaryYellow};
+      color: #661ef8;
     }
     50% {
-      color: #a890ff;
+      color: #e31acd;
     }
     100% {
-      color: ${colorVars.primaryYellow};
+      color: #661ef8;
     }
   }
 
@@ -38,7 +38,7 @@ export const StyledNav = styled(Nav)`
     margin-left: 40px;
     font-size: 50px;
     font-family: 'Righteous', cursive;
-    color: ${colorVars.primaryGreen};
+    color: black;
   }
 
   & ul {
