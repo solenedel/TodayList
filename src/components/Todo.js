@@ -15,7 +15,7 @@ const Todo = ({ todo, toggleComplete, removeTodo }) => {
   return (
     <div id="todo-input">
       <div className="todo-item">
-        <input type="checkbox" checked={todo.completed} onClick={handleCheckboxClick} />
+        <input type="checkbox" /* checked={todo.completed} */ onClick={handleCheckboxClick} />
         <li
           style={{
             textDecoration: todo.completed ? 'line-through' : null,
