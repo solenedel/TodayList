@@ -1,6 +1,6 @@
 {
-  "homepage": "http://solenedel.github.io/todaylist",
-  "name": "todaylist",
+  "homepage": "http://solenedel.github.io/TodayList",
+  "name": "TodayList",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:8081",

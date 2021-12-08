@@ -13,12 +13,14 @@ After creating a Postgres database, in PSQL run:
 
 To reset the database subsequently, run in the node terminal: `npm run reset-db`
 
-## Features
+## Broken / to fix
 
-- persist state for lists
+- no lists yet message not shown on first page load
+- reloading page goes to different URL?
+- rename list feature need to fix styling
+- alert before deleting a list or a todo item
+
+## Extra features
+
 - select an icon for each list item (form fontawesome)
 - move items between the two lists by dragging and dropping
-
-## Other to-do
-
-- alert before deleting a list or a todo item

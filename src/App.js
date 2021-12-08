@@ -67,7 +67,7 @@ function App() {
         <StyledNav deleteList={deleteList} addNewList={addNewList} lists={lists} />
         <PageContainer>
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/TodayList/">
               <StyledHomePage
                 deleteList={deleteList}
                 addNewList={addNewList}
