@@ -69,6 +69,8 @@ const ListContainer = ({
           >
             Rename
           </button>
+        </div>
+        <div className="rename">
           {isOpenRename && (
             <form id="rename-form" onSubmit={handleRenameFormSubmit}>
               <input type="text" placeholder="new name" onChange={handleRenameInputChange} />

@@ -15,9 +15,9 @@ To reset the database subsequently, run in the node terminal: `npm run reset-db`
 
 ## Broken / to fix
 
-- no lists yet message not shown on first page load
 - rename list feature need to fix styling
 - alert before deleting a list or a todo item
+- clean up code
 
 ## Extra features
 

@@ -141,6 +141,12 @@ export const StyledHomePage = styled(HomePage)`
     }
   }
 
+  .rename {
+    /* border: solid red 3px; */
+    display: flex;
+    flex-direction: column;
+  }
+
   .btn-container {
     display: flex;
     justify-content: space-between;
@@ -162,7 +168,7 @@ export const StyledHomePage = styled(HomePage)`
         color: black;
       }
 
-      /* :active {
+      /* & :active {
         transform: translateY(4px);
       } */
     }
