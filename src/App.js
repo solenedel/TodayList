@@ -7,15 +7,11 @@ import { StyledHomePage } from './components/styled-components/HomePage.style';
 import { AppContainer } from './components/styled-components/AppContainer';
 import { PageContainer } from './components/styled-components/PageContainer';
 import { StyledFooter } from './components/styled-components/Footer.style';
-import { StyledLoginPage } from './components/styled-components/LoginPage.style';
-import { AppContext } from './context';
 
 // unique local storage key to store the todos
 const LOCAL_STORAGE_KEY_LISTS = 'todaylist-lists';
 
 function App() {
-  const [user, setUser] = useState({});
-
   const [lists, setLists] = useState([]);
 
   // persist lists on reload page
@@ -65,34 +61,25 @@ function App() {
   };
 
   return (
-    <AppContext.Provider
-      value={{
-        userContext: [user, setUser],
-      }}
-    >
-      <Router>
-        <AppContainer>
-          <GlobalStyles />
-          <StyledNav deleteList={deleteList} addNewList={addNewList} lists={lists} />
-          <PageContainer>
-            <Switch>
-              <Route exact path="/">
-                <StyledHomePage
-                  deleteList={deleteList}
-                  addNewList={addNewList}
-                  lists={lists}
-                  renameList={renameList}
-                />
-              </Route>
-              <Route exact path="/login">
-                <StyledLoginPage />
-              </Route>
-            </Switch>
-          </PageContainer>
-          <StyledFooter />
-        </AppContainer>
-      </Router>
-    </AppContext.Provider>
+    <Router>
+      <AppContainer>
+        <GlobalStyles />
+        <StyledNav deleteList={deleteList} addNewList={addNewList} lists={lists} />
+        <PageContainer>
+          <Switch>
+            <Route exact path="/">
+              <StyledHomePage
+                deleteList={deleteList}
+                addNewList={addNewList}
+                lists={lists}
+                renameList={renameList}
+              />
+            </Route>
+          </Switch>
+        </PageContainer>
+        <StyledFooter />
+      </AppContainer>
+    </Router>
   );
 }
 
