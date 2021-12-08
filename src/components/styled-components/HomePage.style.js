@@ -8,8 +8,7 @@ export const StyledHomePage = styled(HomePage)`
   width: 100vw;
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: flex-start;
+  justify-content: center;
   font-size: 20px;
   margin-top: 50px;
 
@@ -26,8 +25,12 @@ export const StyledHomePage = styled(HomePage)`
   }
 
   #no-list-yet {
-    margin-left: 50px;
+    color: ${colorVars.primaryPink};
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
     font-size: 25px;
+    height: 40vh;
   }
 
   #no-todos-yet {
@@ -183,6 +186,13 @@ export const StyledHomePage = styled(HomePage)`
       display: flex;
       align-items: baseline;
       word-wrap: break-word;
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    #no-list-yet {
+      font-size: 20px;
+      padding: 0 20px 0 0;
     }
   }
 `;

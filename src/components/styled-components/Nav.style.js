@@ -81,6 +81,7 @@ export const StyledNav = styled(Nav)`
       letter-spacing: -1.2px;
       position: relative;
       left: 10px;
+      text-align: center;
     }
 
     div#logo {
