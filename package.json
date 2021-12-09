@@ -31,11 +31,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "dev": "concurrently \"cd server && nodemon server.js\" \"npm i && npm start\"",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "reset-db": "cd server && node reset-db.js"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
