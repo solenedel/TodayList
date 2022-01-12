@@ -2,11 +2,11 @@
 import React from 'react';
 
 const Todo = ({ todo, toggleComplete, removeTodo }) => {
-  // handle checkbox click to trigger completion toggle
-  const handleCheckboxClick = () => {
+  // mark as complete
+  const handleComplete = () => {
     toggleComplete(todo.id);
+    console.log('completed todo');
   };
-
   // handle click to delete todo
   const handleRemoveClick = () => {
     removeTodo(todo.id);
@@ -15,8 +15,11 @@ const Todo = ({ todo, toggleComplete, removeTodo }) => {
   return (
     <div id="todo-input">
       <div className="todo-item">
-        <div className="todo-optns">
-          <input type="checkbox" checked={todo.completed} onClick={handleCheckboxClick} />
+        {/* eslint-disable-next-line */}
+        <div className="todo-optns" >
+          <button id="complete-todo-btn" type="button" onClick={handleComplete}>
+            complete
+          </button>
           <button id="remove-todo-btn" type="button" onClick={handleRemoveClick}>
             <i className="fas fa-times" />
           </button>
