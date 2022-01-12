@@ -222,13 +222,15 @@ export const StyledHomePage = styled(HomePage)`
   }
 
   #todo-input {
-    width: 300px;
+    max-width: 280px;
+    /* max-with: 50vw; */
     display: flex;
     margin-bottom: 15px;
     padding-top: 10px;
     background: #90aeff;
     border-radius: 5px;
     justify-content: space-evenly;
+    /* border: solid yellow 3px; */
 
     & li {
       word-wrap: break-word;
@@ -241,7 +243,6 @@ export const StyledHomePage = styled(HomePage)`
       align-items: center;
       word-wrap: break-word;
       margin-bottom: 10px;
-      /* border: solid yellow 3px; */
     }
   }
 
