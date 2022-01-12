@@ -14,8 +14,7 @@ const Todo = ({ todo, toggleComplete, removeTodo }) => {
   return (
     <div id="todo-input">
       <div className="todo-item">
-        {/* eslint-disable-next-line */}
-        <div className="todo-optns" >
+        <div className="todo-optns">
           <button id="complete-todo-btn" type="button" onClick={handleComplete}>
             {todo.completed ? (
               <i className="far fa-check-square" />

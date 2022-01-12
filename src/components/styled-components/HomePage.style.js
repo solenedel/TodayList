@@ -219,7 +219,11 @@ export const StyledHomePage = styled(HomePage)`
   #todo-input {
     width: 300px;
     display: flex;
-    justify-content: space-between;
+    margin-bottom: 15px;
+    background: #90aeff;
+    border-radius: 5px;
+    justify-content: space-evenly;
+    /* border-bottom: solid black 1px; */
 
     & input {
       margin-right: 8px;
