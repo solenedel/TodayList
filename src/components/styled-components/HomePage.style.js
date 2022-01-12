@@ -199,6 +199,7 @@ export const StyledHomePage = styled(HomePage)`
 
     & i {
       color: black;
+      margin-right: 5px;
     }
   }
 
@@ -209,6 +210,10 @@ export const StyledHomePage = styled(HomePage)`
 
     & i {
       font-size: 25px;
+      opacity: 0.75;
+      /* border: solid red 3px; */
+      position: relative;
+      right: 0px;
     }
   }
 
@@ -220,25 +225,23 @@ export const StyledHomePage = styled(HomePage)`
     width: 300px;
     display: flex;
     margin-bottom: 15px;
+    padding-top: 10px;
     background: #90aeff;
     border-radius: 5px;
     justify-content: space-evenly;
-    /* border-bottom: solid black 1px; */
-
-    & input {
-      margin-right: 8px;
-    }
 
     & li {
       word-wrap: break-word;
+      max-width: 70%;
     }
 
-    .todo-item {
-      width: 95%;
+    & .todo-item {
+      width: 80%;
       display: flex;
       align-items: center;
       word-wrap: break-word;
       margin-bottom: 10px;
+      /* border: solid yellow 3px; */
     }
   }
 
@@ -280,9 +283,6 @@ export const StyledHomePage = styled(HomePage)`
       }
     }
 
-    .fa-times {
-      font-size: 12px;
-    }
     .list {
       margin: 20px 0 0 0;
     }

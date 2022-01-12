@@ -22,9 +22,6 @@ const Todo = ({ todo, toggleComplete, removeTodo }) => {
               <i className="far fa-square" />
             )}
           </button>
-          <button id="remove-todo-btn" type="button" onClick={handleRemoveClick}>
-            <i className="fas fa-times" />
-          </button>
         </div>
 
         <li
@@ -35,6 +32,9 @@ const Todo = ({ todo, toggleComplete, removeTodo }) => {
           {todo.task}
         </li>
       </div>
+      <button id="remove-todo-btn" type="button" onClick={handleRemoveClick}>
+        <i className="fas fa-times-circle" />
+      </button>
     </div>
   );
 };
