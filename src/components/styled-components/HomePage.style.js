@@ -193,6 +193,15 @@ export const StyledHomePage = styled(HomePage)`
     }
   }
 
+  #complete-todo-btn {
+    background: none;
+    border: none;
+
+    & i {
+      color: black;
+    }
+  }
+
   #remove-todo-btn {
     background: none;
     border: none;

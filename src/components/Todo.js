@@ -5,7 +5,6 @@ const Todo = ({ todo, toggleComplete, removeTodo }) => {
   // mark as complete
   const handleComplete = () => {
     toggleComplete(todo.id);
-    console.log('completed todo');
   };
   // handle click to delete todo
   const handleRemoveClick = () => {
@@ -18,7 +17,11 @@ const Todo = ({ todo, toggleComplete, removeTodo }) => {
         {/* eslint-disable-next-line */}
         <div className="todo-optns" >
           <button id="complete-todo-btn" type="button" onClick={handleComplete}>
-            complete
+            {todo.completed ? (
+              <i className="far fa-check-square" />
+            ) : (
+              <i className="far fa-square" />
+            )}
           </button>
           <button id="remove-todo-btn" type="button" onClick={handleRemoveClick}>
             <i className="fas fa-times" />
